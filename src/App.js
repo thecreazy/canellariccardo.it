@@ -3,6 +3,7 @@ import styled, {ThemeProvider} from 'styled-components'
 
 import Backgrounds from '@/components/section/Backgrounds'
 import Home from '@/components/section/Home'
+import Blog from '@/components/section/Blog'
 
 export default class App extends Component {
 	render() {
@@ -15,6 +16,7 @@ export default class App extends Component {
 			<Fragment>
 				<Backgrounds bgs={backgrounds} />
 				<Home />
+				<Blog />
 			</Fragment>
 			</ThemeProvider>
 		)

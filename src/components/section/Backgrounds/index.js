@@ -37,15 +37,22 @@ export default class App extends Component {
     constructor(props){
         super(props)
         this.state = {
-            x: '0px',
-            y: '0px'
+            '--x': '0px',
+            '--y': '0px',
+            opacity: 1
         }
     }
     componentDidMount(){
         document.addEventListener("mousemove", (e) => {
             this.setState({
-                x: e.clientX + 'px',
-                y: e.clientY + 'px'
+                '--x': e.clientX + 'px',
+                '--y': e.clientY + 'px'
+            })
+        })
+        document.addEventListener("scroll", (e) => {
+            const value = 70 / window.pageYOffset
+            this.setState({
+                opacity: value > 1 ? 1 : value
             })
         })
     }
@@ -58,7 +65,7 @@ export default class App extends Component {
                     <Background background={element} id={`bgs-${index}`} key={`bgs-${index}`} />
                 ))
             }
-            <Overlay id={'mouseoverlay'} style={{'--x': this.state.x, '--y': this.state.y}} />
+            <Overlay id={'mouseoverlay'} style={this.state} />
 			</Wrapper>
 		)
 	}
