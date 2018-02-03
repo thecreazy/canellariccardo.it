@@ -2,3 +2,5 @@
 
 # production
 /dist
+
+.DS_Store
