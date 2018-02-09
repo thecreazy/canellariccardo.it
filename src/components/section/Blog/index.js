@@ -1,21 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } 		from 'react'
 
-import {Title,
-		Subtitle,
-		Description,
-        Paragraph,
-        Section } from '@/components/atoms'
+import { SectionTitle, Section } 	from '@/components/atoms'
+import Fetured	 					from './Featured'
+import Older 						from './Older'
 
-export default class App extends Component {
+export default class Blog extends Component {
 	render() {
-        console.log(Section)
+		const { data } = this.props
+		console.log(data)
 		return (
-			<Section type={'hero'} id={'home'}>
-				<Subtitle>Hello</Subtitle>
-				<Title>Riccardo Canella</Title>
-				<Paragraph>Specializing in websites, apps, e-commerce, lifestyle, packaging and overall creative + tech direction.</Paragraph>
+			<Section id={'home'}>
+				<SectionTitle>Blog</SectionTitle>
+                <Fetured data={data.featured} />
+				<Older data={data.lists} />
 			</Section>
 		)
 	}
 
 }
+
+

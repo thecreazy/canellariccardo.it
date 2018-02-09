@@ -12,7 +12,7 @@ const Wrapper =  styled.div`
 const Background = styled.div`
     width: 100%;
     height: 100%;
-    background-image: url(${props => props.background});
+    background: ${props => props.background};
     background-position: 50% 50%;
     background-size: cover;
     will-change: opacity;
@@ -23,39 +23,7 @@ const Background = styled.div`
     right: 0;
 `
 
-const Overlay = styled.div`
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(19, 19, 19, 0) 20%, rgb(19, 19, 19) 40%);
-    mix-blend-mode: var(--blend, normal);
-`
-
 export default class App extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            '--x': '0px',
-            '--y': '0px',
-            opacity: 1
-        }
-    }
-    componentDidMount(){
-        document.addEventListener("mousemove", (e) => {
-            this.setState({
-                '--x': e.clientX + 'px',
-                '--y': e.clientY + 'px'
-            })
-        })
-        document.addEventListener("scroll", (e) => {
-            const value = 70 / window.pageYOffset
-            this.setState({
-                opacity: value > 1 ? 1 : value
-            })
-        })
-    }
 	render() {
         const {bgs} = this.props
 		return (
@@ -65,7 +33,6 @@ export default class App extends Component {
                     <Background background={element} id={`bgs-${index}`} key={`bgs-${index}`} />
                 ))
             }
-            <Overlay id={'mouseoverlay'} style={this.state} />
 			</Wrapper>
 		)
 	}

@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 
 const Subtitle = styled.h2`
-    font-size: 20px;
+    font-size: 1rem;
     letter-spacing: 2.5px;
     margin-bottom: 10px;
-    color: white;
-    line-height: 36px;
-    font-weight: 700;
-    margin-top: 20px;
+    color: #1e3264;
+    line-height: 1;
+    font-weight: 400;
+    margin-top: -5px;
+    text-align: center;
     margin-left: ${props => props.hero ? '70px': '0px'};
 `;
 
