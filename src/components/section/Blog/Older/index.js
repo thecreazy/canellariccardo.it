@@ -25,12 +25,13 @@ const Padded = styled.div`
 
 const Link = styled.a`
     line-height: 1;
-	color: #fff;
+	color: #4a4a4a;
 	font-weight: 700;
     font-family: Circular;
     font-style: normal;
     margin-top: 10px;
     text-decoration: none;
+    font-family: ApBold;
 `
 
 export default class Featured extends Component {

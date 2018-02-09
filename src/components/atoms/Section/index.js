@@ -6,7 +6,7 @@ const Section = styled.section`
     margin-right: auto;
     margin-left: auto;
     position: relative;
-    padding-top: 80px;
+    padding-top: 20px;
 `;
 
 export default Section

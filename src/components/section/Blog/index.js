@@ -10,7 +10,7 @@ export default class Blog extends Component {
 		console.log(data)
 		return (
 			<Section id={'home'}>
-				<SectionTitle>Blog</SectionTitle>
+				<SectionTitle>What I write</SectionTitle>
                 <Fetured data={data.featured} />
 				<Older data={data.lists} />
 			</Section>

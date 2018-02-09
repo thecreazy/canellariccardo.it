@@ -1,44 +1,35 @@
 import React, { Component, Fragment } from 'react'
 import styled, {ThemeProvider, injectGlobal} from 'styled-components'
 
-import Backgrounds from '@/components/section/Backgrounds'
 import Home from '@/components/section/Home'
 import Blog from '@/components/section/Blog'
+import Photo from '@/components/section/Photo'
+import Code from '@/components/section/Code'
 
-import ApBold 			from './static/fonts/AP-Bold.woff'
-import ApRegular 		from './static/fonts/AP-Regular.woff'
-import NHGDSPBold 		from './static/fonts/NHGDSP-Bold.woff'
-import NHGDSPMedium		from './static/fonts/NHGDSP-Medium.woff'
-
-console.log(ApBold)
 
 injectGlobal`
 body {
 	margin: 0;
+	background: #fff;
+	color: #1e3264;
 }
 @font-face {
     font-family: ApBold;
-    src: url(${ApBold}) format('woff');
+    src: url('/fonts/AP-Bold.woff') format('woff');
 }
 @font-face {
     font-family: ApRegular;
-    src: url(${ApRegular}) format('woff');
+    src: url('/fonts/AP-Regular.woff') format('woff');
 }
 @font-face {
     font-family: NHGDSPBold;
-    src: url(${NHGDSPBold}) format('woff');
+    src: url('/fonts/NHGDSP-Bold.woff') format('woff');
 }
 @font-face {
-    font-family: MyFont;
-    src: url(${NHGDSPMedium}) format('woff');
+    font-family: NHGDSPMedium;
+    src: url('/fonts/NHGDSP-Medium.woff') format('woff');
 }
 `
-
-const backgrounds = [
-	'linear-gradient(145deg,#ffc867,#f037a6)',
-	'linear-gradient(145deg,#509bf5,#f037a6)',
-	'linear-gradient(145deg,#c3f0c8,#509bf5)',
-]
 
 export default class App extends Component {
 	constructor(props){
@@ -55,6 +46,21 @@ export default class App extends Component {
 				blog: data
 			})
 		})
+		fetch('https://backend.canellariccardo.it/instagram')
+		.then((data)=>data.json())
+		.then((data)=>{
+			this.setState({
+				instagram: data
+			})
+		})
+		fetch('https://backend.canellariccardo.it/github')
+		.then((data)=>data.json())
+		.then((data)=>{
+			this.setState({
+				github: data
+			})
+		})
+		
 	}
 
 	render() {
@@ -62,12 +68,16 @@ export default class App extends Component {
 		return (
 			<ThemeProvider theme={{ciao:'ciao'}}>
 			<Fragment>
-				<Backgrounds bgs={backgrounds} />
 				<Home />
 				{
 					(() =>{ if(this.state.blog) return <Blog data={this.state.blog} />})() 
 				}
-				
+				{
+					(() =>{ if(this.state.blog) return <Code data={this.state.github} />})() 
+				}
+				{
+					(() =>{ if(this.state.instagram) return <Photo data={this.state.instagram} />})() 
+				}
 			</Fragment>
 			</ThemeProvider>
 		)

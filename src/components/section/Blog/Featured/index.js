@@ -55,9 +55,10 @@ const Organization = styled.h4`
 	align-self: flex-start;
 	font-size: 1.25rem;
 	margin: 0 3% 3% 0;
-    color: #fff;
+    color: #4a4a4a;
     font-style: normal;
-    font-weight: 500;
+	font-weight: 500;
+	font-family: NHGDSPMedium, Arial, sans-serif;
     background-color: rgba(30,50,100,.25);
     padding: .3125rem 1.5625rem;
     display: inline-block;
@@ -67,6 +68,7 @@ const Organization = styled.h4`
 const Title = styled.h3`
 	opacity: 1;
 	transform:matrix(1, 0, 0, 1, 0, 0);
+	font-family: NHGDSPBold, Arial, sans-serif;
 	font-size: 1.75rem;
     max-width: 55%;
     min-width: 55%;
@@ -78,7 +80,6 @@ const Title = styled.h3`
 	padding: .625rem 2.1875rem;
 	text-align: left;
 	font-weight: 700;
-    font-family: Circular;
     font-style: normal;
 `
 
@@ -90,7 +91,8 @@ const Time = styled.p`
 	background-color: #fff;
     padding: .3125rem 1.5625rem;
     display: inline-block;
-    color: #1e3264;
+	color: #4a4a4a;
+	font-family: ApRegular;
 `
 
 const Link = styled.a`
@@ -100,15 +102,15 @@ const Link = styled.a`
 	width: 40%;
 	font-size: 1rem;
 	display: flex;
-	color: #fff;
+	color: #4a4a4a;
 	align-items: center;
 	text-decoration: none;
+	font-family: ApRegular;
 `
 
 export default class Featured extends Component {
 	render() {
 		const { data } = this.props
-		console.log(data)
 		return (
 			<Wrapper id={'featured'}>
 				<ParallaxImage src={ data.image } />

@@ -4,7 +4,7 @@ const Subtitle = styled.h2`
     font-size: 1rem;
     letter-spacing: 2.5px;
     margin-bottom: 10px;
-    color: #1e3264;
+    font-family: NHGDSPBold, Arial, sans-serif;
     line-height: 1;
     font-weight: 400;
     margin-top: -5px;
