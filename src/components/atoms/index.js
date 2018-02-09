@@ -4,10 +4,4 @@ import SectionTitle from '@/components/atoms/SectionTitle'
 import Paragraph from '@/components/atoms/Paragraph'
 import Section from '@/components/atoms/Section'
 
-export {
-    Title,
-    Subtitle,
-    SectionTitle,
-    Paragraph,
-    Section
-}
+export { Title, Subtitle, SectionTitle, Paragraph, Section }

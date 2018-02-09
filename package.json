@@ -3,13 +3,16 @@
   "version": "0.1.2",
   "description": "Canella Riccardo site",
   "scripts": {
-    "test": "",
+    "prettier": "prettier --write '**/*.js'",
     "dev:analyze": "webpack-dev-server --env.analyze --config ./config/webpack.config.js",
     "dev": "webpack-dev-server --env.development --config ./config/webpack.config.js",
     "build": "webpack --env.production --config ./config/webpack.config.js",
     "server": "serve -s dist -p 3000",
     "deploy": ""
   },
+  "pre-commit": [
+    "prettier"
+  ],
   "author": "Riccardo Canella <canella_riccardo@icloud.com>",
   "license": "MIT",
   "dependencies": {
@@ -36,6 +39,8 @@
     "html-webpack-plugin": "^2.29.0",
     "img-loader": "^2.0.0",
     "postcss-loader": "^2.0.6",
+    "pre-commit": "^1.2.2",
+    "prettier": "1.10.2",
     "serve": "^6.0.3",
     "style-loader": "^0.18.2",
     "styled-components": "^3.1.4",

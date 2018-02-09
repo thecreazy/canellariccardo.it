@@ -4,8 +4,8 @@ const { environment } = require('webpack-config')
 const { ConfigCache } = require('webpack-config')
 
 environment.setAll({
-	env: () => process.env.NODE_ENV,
-	template: () => 'react'
+  env: () => process.env.NODE_ENV,
+  template: () => 'react'
 })
 
 const Config = config.default
