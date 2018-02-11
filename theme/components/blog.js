@@ -1,6 +1,6 @@
 const blog = {
-    older:{},
-    featured:{}
+  older: {},
+  featured: {}
 }
 
 blog.older.wrapper = `
