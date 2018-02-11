@@ -4,35 +4,10 @@ import styled from 'styled-components'
 
 import ParallaxImage from '@/components/section/Blog/ParallaxImage'
 
-const Wrapper = styled.div`
-  justify-content: space-around;
-  display: flex;
-  align-items: flex-start;
-  flex: 1;
-  width: 100%;
-  margin: 1.5625rem 0;
-`
-
-const Single = styled.div`
-  opacity: 1;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  margin: 0;
-  width: 15.625rem;
-`
-const Padded = styled.div`
-  margin-top: 10px;
-`
-
-const Link = styled.a`
-  line-height: 1;
-  color: #4a4a4a;
-  font-weight: 700;
-  font-family: Circular;
-  font-style: normal;
-  margin-top: 10px;
-  text-decoration: none;
-  font-family: ApBold;
-`
+const Wrapper = styled.div`${props => props.theme.components.blog.older.wrapper}`
+const Single = styled.div`${props => props.theme.components.blog.older.single}`
+const Padded = styled.div`${props => props.theme.components.blog.older.padded}`
+const Link = styled.a`${props => props.theme.components.blog.older.link}`
 
 export default class Featured extends Component {
   render() {

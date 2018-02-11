@@ -7,7 +7,6 @@ import Older from './Older'
 export default class Blog extends Component {
   render() {
     const { data } = this.props
-    console.log(data)
     return (
       <Section id={'home'}>
         <SectionTitle>What I write</SectionTitle>
