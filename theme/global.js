@@ -1,8 +1,10 @@
+import variables from './core/variables'
+
 export default (global = `
     body {
         margin: 0;
-        background: #fff;
-        color: #1e3264;
+        background: ${variables.white};
+        color: ${variables.primary};
     }
     @font-face {
         font-family: ApBold;

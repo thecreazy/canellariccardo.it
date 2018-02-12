@@ -1,35 +1,37 @@
+
+import variables from '../core/variables'
+
 const blog = {
   older: {},
   featured: {}
 }
 
 blog.older.wrapper = `
-justify-content: space-around;
-display: flex;
-align-items: flex-start;
-flex: 1;
-width: 100%;
-margin: 1.5625rem 0;
+  justify-content: space-around;
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+  width: 100%;
+  margin: 1.5625rem 0;
 `
 blog.older.single = `
-opacity: 1;
-transform: matrix(1, 0, 0, 1, 0, 0);
-margin: 0;
-width: 15.625rem;
+  opacity: 1;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  margin: 0;
+  width: 15.625rem;
 `
 blog.older.padded = `
-margin-top: 10px;
+  margin-top: 10px;
 `
 
 blog.older.link = `
-line-height: 1;
-color: #4a4a4a;
-font-weight: 700;
-font-family: Circular;
-font-style: normal;
-margin-top: 10px;
-text-decoration: none;
-font-family: ApBold;
+  line-height: 1;
+  color: ${variables.primary};
+  font-weight: 700;
+  font-style: normal;
+  margin-top: 10px;
+  text-decoration: none;
+  font-family: ApBold;
 `
 
 blog.featured.wrapper = `
@@ -62,7 +64,7 @@ left: 3.75%;
 z-index: -1;
 position: absolute;
 width: 92.5%;
-background-color: #1e3264;
+background-color: ${variables.primary};
 &:before {
   content: '';
   padding-bottom: 100%;
@@ -84,7 +86,7 @@ margin: 0 0 3% 3%;
 align-self: flex-start;
 font-size: 1.25rem;
 margin: 0 3% 3% 0;
-color: #4a4a4a;
+color: ${variables.grey};
 font-style: normal;
 font-weight: 500;
 font-family: NHGDSPMedium, Arial, sans-serif;
@@ -104,8 +106,8 @@ min-width: 55%;
 line-height: 1.1;
 margin: 0 auto 0 0;
 width: auto;
-color: #fff;
-background-color: #1e3264;
+color: ${variables.white};
+background-color: ${variables.primary};
 padding: 0.625rem 2.1875rem;
 text-align: left;
 font-weight: 700;
@@ -117,10 +119,10 @@ opacity: 1;
 transform: matrix(1, 0, 0, 1, 0, 0);
 margin: -0.625rem 0 0 6%;
 font-size: 1.25rem;
-background-color: #fff;
+background-color: ${variables.white};
 padding: 0.3125rem 1.5625rem;
 display: inline-block;
-color: #4a4a4a;
+color: ${variables.grey};
 font-family: ApRegular;
 `
 
@@ -131,7 +133,7 @@ margin: 3.5% auto 0 7.5%;
 width: 40%;
 font-size: 1rem;
 display: flex;
-color: #4a4a4a;
+color: ${variables.grey};
 align-items: center;
 text-decoration: none;
 font-family: ApRegular;

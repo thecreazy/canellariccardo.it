@@ -1,3 +1,5 @@
+import variables from '../core/variables'
+
 const photo = {}
 
 photo.wrapper = `
@@ -47,7 +49,7 @@ photo.meta = `
 padding: 20px;
 text-transform: uppercase;
 font-size: 13px;
-color: #c0a062;
+color: ${variables.seconday};
 font-weight: 400;
 position: absolute;
 left: 20px;
@@ -57,8 +59,8 @@ top: -30px;
 border: 1px solid hsla(0, 0%, 100%, 0.1);
 transition: all 0.25s ease-out;
 top: -40px;
-color: #c0a062;
-border: 1px solid #c0a062;
+color: ${variables.seconday};
+border: 1px solid ${variables.seconday};
 `
 
 photo.tag = `
@@ -66,11 +68,11 @@ position: absolute;
 top: -1px;
 z-index: 10;
 padding: 10px;
-color: #fff;
+color: ${variables.white};
 font-family: ApRegular;
 -webkit-transform: translateY(-50%);
 transform: translateY(-50%);
-background-color: #1e3264;
+background-color: ${variables.primary};
 `
 
 export default photo
