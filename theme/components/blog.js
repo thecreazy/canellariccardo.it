@@ -1,4 +1,3 @@
-
 import variables from '../core/variables'
 
 const blog = {
