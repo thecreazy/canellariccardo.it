@@ -40,6 +40,11 @@ typography.paragraph = `
         color: ${variables.primary};
         font-weight: bold;
     }
+    @media ${variables.smallAndDown}{
+        width:95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 `
 
 export default typography

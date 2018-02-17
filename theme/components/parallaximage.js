@@ -1,3 +1,5 @@
+import variables from '../core/variables'
+
 export default `
     opacity: 1;
     margin: 0;
@@ -14,5 +16,10 @@ export default `
         content: '';
         display: table;
         clear: both;
+    }
+    @media ${variables.smallAndDown}{
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 `

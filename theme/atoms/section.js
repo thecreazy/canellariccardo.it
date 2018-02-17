@@ -8,7 +8,11 @@ section.default = `
     margin-left: auto;
     position: relative;
     padding-top: 20px;
+    @media ${variables.smallAndDown}{
+        width: 100%;
+    }
 `
+
 section.title = `
     font-family: NHGDSPBold, Arial, sans-serif;
     font-size: 3.75rem;
@@ -20,6 +24,9 @@ section.title = `
     &:after {
     content: '';
     position: absolute;
+    }
+    @media ${variables.smallAndDown}{
+        font-size: 2.75rem;
     }
 `
 export default section

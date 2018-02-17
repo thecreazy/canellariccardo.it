@@ -9,14 +9,22 @@ photo.wrapper = `
     padding-left: 20px;
     padding-right: 20px;
     list-style: none;
+    @media ${variables.smallAndDown}{
+        padding: 0px;
+    }
 `
 
 photo.single = `
-width: calc(30.333333333333336% - 12.3333333333333333px);
-float: left;
-opacity: 1;
-transform: translateY(0px);
-padding: 60px 20px;
+    width: calc(30.333333333333336% - 12.3333333333333333px);
+    float: left;
+    opacity: 1;
+    transform: translateY(0px);
+    padding: 60px 20px;
+    @media ${variables.smallAndDown}{
+        float: unset;
+        width: 100%;
+        padding: 0px;
+    }
 `
 
 photo.link = `

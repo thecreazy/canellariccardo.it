@@ -7,7 +7,6 @@ const ImageStyled = styled.div`
     background-image: url('${props => props.image}');
     transform: matrix(1, 0, 0, 1, 0, 0);
     margin-left: ${props => (props.type === 'big' ? '0%' : '50%')};
-    width: ${props => (props.type === 'big' ? '100%' : '50%')};
 `
 
 export default class ParallaxImage extends Component {
