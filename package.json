@@ -8,7 +8,9 @@
     "dev": "webpack-dev-server --env.development --config ./config/webpack.config.js",
     "build": "webpack --env.production --config ./config/webpack.config.js",
     "server": "serve -s dist -p 3000",
-    "deploy": ""
+    "deploy": "",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "pre-commit": [
     "prettier"
@@ -49,6 +51,11 @@
     "webpack-bundle-analyzer": "^2.8.3",
     "webpack-config": "^7.4.0",
     "webpack-dev-server": "^2.6.1",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "@storybook/react": "^3.3.13",
+    "@storybook/addon-actions": "^3.3.13",
+    "@storybook/addon-links": "^3.3.13",
+    "@storybook/addons": "^3.3.13",
+    "babel-core": "^6.26.0"
   }
 }

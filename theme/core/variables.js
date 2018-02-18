@@ -1,9 +1,9 @@
-const smallScreenUp =   '601px'
-const mediumScreenUp =  '993px'
-const largeScreenUp =   '1201px'
-const smallScreen =     '600px'
-const mediumScreen =    '992px'
-const largeScreen =     '1200px'
+const smallScreenUp = '601px'
+const mediumScreenUp = '993px'
+const largeScreenUp = '1201px'
+const smallScreen = '600px'
+const mediumScreen = '992px'
+const largeScreen = '1200px'
 
 export default {
   primary: '#1e3264',
@@ -17,5 +17,3 @@ export default {
   mediumAndDown: `only screen and (max-width : ${mediumScreen})`,
   mediumOnly: `only screen and (min-width : ${smallScreenUp}) and (max-width : ${mediumScreen})`
 }
-
-
