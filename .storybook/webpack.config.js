@@ -6,13 +6,55 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 
+const {
+  root,
+  src,
+  public,
+  dist,
+  exclude,
+  browserList
+} = require('../config/config')
+
 module.exports = {
   plugins: [
     // your custom plugins
   ],
   module: {
     rules: [
-      // add your custom rules.
-    ],
+      {
+        test: /\.(ttf|woff|otf|png|svg|jpg)$/,
+        use: [
+          'url-loader?limit=10000',
+          {
+            loader: 'img-loader',
+            options: {
+              enabled: true,
+              gifsicle: {
+                interlaced: false
+              },
+              mozjpeg: {
+                progressive: true,
+                arithmetic: false
+              },
+              optipng: false,
+              pngquant: {
+                floyd: 0.5,
+                speed: 2
+              },
+              svgo: {
+                plugins: [{ removeTitle: true }, { convertPathData: false }]
+              }
+            }
+          },
+          'file-loader'
+        ]
+      }
+    ]
   },
-};
+  resolve: {
+    extensions: ['.js', '.json'],
+    alias: {
+      '@': src
+    }
+  }
+}

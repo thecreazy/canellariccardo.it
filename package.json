@@ -2,15 +2,17 @@
   "name": "canella-riccardo-it",
   "version": "0.1.2",
   "description": "Canella Riccardo site",
+  "homepage": "https://thecreazy.github.io/canellariccardo.it",
   "scripts": {
     "prettier": "prettier --write '**/*.js'",
     "dev:analyze": "webpack-dev-server --env.analyze --config ./config/webpack.config.js",
     "dev": "webpack-dev-server --env.development --config ./config/webpack.config.js",
     "build": "webpack --env.production --config ./config/webpack.config.js",
     "server": "serve -s dist -p 3000",
-    "deploy": "",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "predeploy": "npm run build-storybook",
+    "deploy": "gh-pages -d storybook-static"
   },
   "pre-commit": [
     "prettier"
@@ -24,9 +26,15 @@
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.3.13",
+    "@storybook/addon-links": "^3.3.13",
+    "@storybook/addon-options": "^3.3.13",
+    "@storybook/addons": "^3.3.13",
+    "@storybook/react": "^3.3.13",
     "autoprefixer": "^7.1.2",
     "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
+    "babel-core": "^6.26.0",
     "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
@@ -37,6 +45,7 @@
     "cssnano": "^3.10.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^0.11.2",
+    "gh-pages": "^1.1.0",
     "html-critical-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.29.0",
     "img-loader": "^2.0.0",
@@ -51,11 +60,6 @@
     "webpack-bundle-analyzer": "^2.8.3",
     "webpack-config": "^7.4.0",
     "webpack-dev-server": "^2.6.1",
-    "whatwg-fetch": "^2.0.3",
-    "@storybook/react": "^3.3.13",
-    "@storybook/addon-actions": "^3.3.13",
-    "@storybook/addon-links": "^3.3.13",
-    "@storybook/addons": "^3.3.13",
-    "babel-core": "^6.26.0"
+    "whatwg-fetch": "^2.0.3"
   }
 }

@@ -1,6 +1,4 @@
 /node_modules
-
-# production
 /dist
-
 .DS_Store
+/storybook-static
