@@ -4,7 +4,6 @@ const photo = {}
 
 photo.wrapper = `
     position: relative;
-    width: 100%;
     max-width: 1680px;
     padding-left: 20px;
     padding-right: 20px;
@@ -20,6 +19,9 @@ photo.single = `
     opacity: 1;
     transform: translateY(0px);
     padding: 60px 20px;
+    @media ${variables.mediumOnly}{
+        width: calc(30.333333333333336% - 22.3333333333333333px);
+    }
     @media ${variables.smallAndDown}{
         float: unset;
         width: 100%;

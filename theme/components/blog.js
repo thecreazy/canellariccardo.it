@@ -12,7 +12,7 @@ blog.older.wrapper = `
   flex: 1;
   width: 100%;
   margin: 1.5625rem 0;
-  @media ${variables.smallAndDown}{
+  @media ${variables.mediumAndDown}{
     flex-direction: column;
   }
 `
@@ -21,11 +21,14 @@ blog.older.single = `
   transform: matrix(1, 0, 0, 1, 0, 0);
   margin: 0;
   width: 15.625rem;
-  @media ${variables.smallAndDown}{
-    width: 75%;
+  @media ${variables.mediumAndDown}{
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 60px;
+  }
+  @media ${variables.smallAndDown}{
+    width: 75%;
   }
 `
 blog.older.padded = `
@@ -64,6 +67,9 @@ blog.featured.details = `
   min-width: 100%;
   height: auto;
   z-index: 2;
+  @media ${variables.mediumOnly}{
+    bottom: -4%;
+  }
   @media ${variables.smallAndDown}{
     position: relative;
     width: 100%;
