@@ -50,7 +50,7 @@ export default class App extends Component {
             if (this.state.blog) return <Blog data={this.state.blog} />
           })()}
           {(() => {
-            if (this.state.blog) return <Code data={this.state.github} />
+            if (this.state.github) return <Code data={this.state.github.repos} />
           })()}
           {(() => {
             if (this.state.instagram)

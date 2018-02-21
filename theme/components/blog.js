@@ -12,7 +12,7 @@ blog.older.wrapper = `
   flex: 1;
   width: 100%;
   margin: 1.5625rem 0;
-  @media ${variables.mediumAndDown}{
+  @media ${variables.smallAndDown}{
     flex-direction: column;
   }
 `
@@ -21,14 +21,11 @@ blog.older.single = `
   transform: matrix(1, 0, 0, 1, 0, 0);
   margin: 0;
   width: 15.625rem;
-  @media ${variables.mediumAndDown}{
-    width: 50%;
+  @media ${variables.smallAndDown}{
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 60px;
-  }
-  @media ${variables.smallAndDown}{
-    width: 75%;
   }
 `
 blog.older.padded = `
