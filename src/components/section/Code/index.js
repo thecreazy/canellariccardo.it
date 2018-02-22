@@ -10,7 +10,9 @@ export default class Code extends Component {
         <SectionTitle>What i code</SectionTitle>
         {data.map(element => (
           <Paragraph>
-            <a target="_blank" href={element.url}>{element.name}</a>
+            <a target="_blank" href={element.url}>
+              {element.name}
+            </a>
           </Paragraph>
         ))}
       </Section>
