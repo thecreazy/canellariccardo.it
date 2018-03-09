@@ -1,14 +1,27 @@
 {
   "name": "canella-riccardo-it",
-  "version": "1.0.0",
   "description": "Canella Riccardo site",
-  "homepage": "https://thecreazy.github.io/canellariccardo.it",
-  "scripts": {
-  },
+  "version": "1.0.0",
   "author": "Riccardo Canella <canella_riccardo@icloud.com>",
-  "license": "MIT",
   "dependencies": {
+    "gatsby": "^1.9.223",
+    "gatsby-link": "^1.6.38",
+    "gatsby-plugin-react-helmet": "^2.0.6",
+    "gatsby-plugin-sass": "^1.0.20",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "gatsby",
+    "portfolio"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "prettier": "^1.11.1"
   }
 }
