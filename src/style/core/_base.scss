@@ -1,0 +1,35 @@
+html, body {
+    margin: 0;
+}
+
+body{
+    background: $background;
+    color: $textcolor;
+    font-family: $fontbase;
+}
+
+section{
+    height: 100vh;
+    padding: 62px 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: 3.75rem;
+    margin: 0.67em 0 0 0;
+    
+}
+
+h2{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-family: $fontparag;
+    font-weight: 400;
+}
+
+p{
+    font-family: $fontparag;
+}
