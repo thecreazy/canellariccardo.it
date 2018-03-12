@@ -1,3 +1,15 @@
-.__midwidth{
-    width: 50%;
+.__fulltwo-tre{
+    width: 75%;
+}
+
+.__absolute{
+    position: absolute;
+    &.--topleft{
+        left: 0;
+        top: 0;
+    }
+}
+
+.__under{
+    z-index: -1;
 }
