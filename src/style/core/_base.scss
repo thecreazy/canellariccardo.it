@@ -36,3 +36,18 @@ p{
     font-size: 1.24rem;
     letter-spacing: 1.5px;
 }
+
+a{
+    background: $goldgradient;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-size: 300%;
+    text-decoration: none;
+    background-position-x: 0%;
+    transition: background 6s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    will-change: background, letter-spacing;
+    &:hover{
+        background-position-x: -150%;
+    }
+}

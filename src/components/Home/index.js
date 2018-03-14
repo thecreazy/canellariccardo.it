@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Circle from '../Circle'
+import Circle from '../../utils/Circle'
 
 export default class Home extends Component{
     constructor(props){
