@@ -1,0 +1,24 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slide{
+    width: 543px;
+    height: 305px;
+    margin: 0 100px;
+    background-position: center center;
+    background-size: cover;
+    .slide__overlay{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background: $overlay;
+        .slide__overlay__span{
+            font-size: 30px;
+            margin-left: -100px;
+            max-width: 70%;
+            font-family: $fontbase;
+        }
+    }
+}

@@ -1,5 +1,6 @@
-$primary:              #282828;
-$secondary:            #eef2f5;
+$primary:              #161616;
+$lightprimary:         #343434;
+$secondary:              #eef2f5;
 $orange:               #FF5C3B;
 $pink:                 #FF2B67;
 $violet:               #7b4397;
@@ -8,8 +9,10 @@ $red:                  #dc2430;
 
 $background:           $primary;
 $textcolor:            $secondary;
+$lighttext:            $lightprimary;
 
 $fontbase:             'Roboto', sans-serif;
 $fontparag:            'Roboto Mono', monospace;
 
 $goldgradient:          linear-gradient(110deg, #bc994e 0%, #bc994e 33%, #d8c498 44%, #775f2d 55%, #bc994e 67%, #bc994e 100%);
+$overlay:             rgba(0, 0, 0, 0.5)
