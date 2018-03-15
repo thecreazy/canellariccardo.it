@@ -8,6 +8,7 @@
     "gatsby-link": "^1.6.38",
     "gatsby-plugin-react-helmet": "^2.0.6",
     "gatsby-plugin-sass": "^1.0.20",
+    "isomorphic-fetch": "^2.2.1",
     "react-helmet": "^5.2.0",
     "react-slick": "^0.20.0",
     "slick-carousel": "^1.8.1"
