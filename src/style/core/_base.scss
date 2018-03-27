@@ -16,6 +16,10 @@ section{
     flex-direction: column;
     box-sizing: border-box;
     position: relative;
+    &.--column{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
     .section__title__background{
         font-size: 18rem;
         position: absolute;

@@ -4,9 +4,11 @@ const { changeFullpageSlide, changeHorizontalSlide } = Fullpage;
 
 import Home from "../components/Home";
 import Blog from "../components/Blog";
+import Lab from "../components/Lab";
+import Photos from "../components/Photos";
 
 const fullPageOptions = {
-  scrollSensitivity: 7,
+  scrollSensitivity: 2,
   touchSensitivity: 2,
   scrollSpeed: 300,
   resetSlides: true,
@@ -41,15 +43,25 @@ export default class Index extends Component {
   }
 
   render() {
-    const { active } = this.state;
-    const currentActive = active.Fullpage;
     fullPageOptions.slides = [
       <Slide><Home /></Slide>,
-      <Slide><Blog /></Slide>
+      <Slide><Blog /></Slide>,
+      <Slide><Lab /></Slide>,
+      <Slide><Photos /></Slide>
     ];
-    return (
-      <Fullpage onSlideChangeStart={this.onSlideChangeStart} onSlideChangeEnd={this.onSlideChangeEnd} {...fullPageOptions}>
-      </Fullpage>
-    );
+    if(false){
+      return (<div>
+        <Home />
+        <Blog />
+        <Lab />
+        <Photos /> 
+      </div>)
+    }else{
+      return (
+        <Fullpage onSlideChangeStart={this.onSlideChangeStart} onSlideChangeEnd={this.onSlideChangeEnd} {...fullPageOptions}>
+        </Fullpage>
+      );
+    }
+    
   }
 }

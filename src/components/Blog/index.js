@@ -2,7 +2,19 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import 'whatwg-fetch'
 
+import config from '../../config'
+
 import Slide from "./slide";
+
+const sliderSettings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  centerMode: true,
+  variableWidth: true
+};
 
 export default class Blog extends Component {
   constructor(props) {
@@ -12,24 +24,15 @@ export default class Blog extends Component {
     };
   }
   componentWillMount() {
-    fetch("https://backend.canellariccardo.it/medium")
+    fetch(config.blogApi)
       .then(response => response.json())
       .then(data => this.setState(data));
   }
   render() {
-    var settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      centerMode: true,
-      variableWidth: true
-    };
     return (
       <section id="blog">
         <h3 className="section__title__background">What i write</h3>
-        <Slider {...settings}>
+        <Slider {...sliderSettings}>
           {(() => {
             const featured = [
               <div>
