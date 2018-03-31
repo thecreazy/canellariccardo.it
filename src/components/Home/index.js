@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Circle from "../../utils/Circle";
+import config from "../../config";
 
 export default class Home extends Component {
   constructor(props) {
@@ -64,6 +65,23 @@ export default class Home extends Component {
           to contact me on canella_riccardo[at]icloud.com.
         </p>
         <h2>ON THE ROAD DEVELOPER</h2>
+        <p className="social">
+          <a target="_blank" href={config.social.facebook}>
+            <span className="icon-facebook" />
+          </a>
+          <a target="_blank" href={config.social.twitter}>
+            <span className="icon-twitter" />
+          </a>
+          <a target="_blank" href={config.social.instagram}>
+            <span className="icon-instagram" />
+          </a>
+          <a target="_blank" href={config.social.linkedin}>
+            <span className="icon-linkedin" />
+          </a>
+          <a target="_blank" href={config.social.github}>
+            <span className="icon-github" />
+          </a>
+        </p>
       </section>
     );
   }

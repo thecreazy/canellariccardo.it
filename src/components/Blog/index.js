@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import 'whatwg-fetch'
+import "whatwg-fetch";
 
-import config from '../../config'
+import config from "../../config";
 
 import Slide from "./slide";
 
