@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Slider from "react-slick";
 import "whatwg-fetch";
 
@@ -13,7 +13,14 @@ const sliderSettings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   centerMode: true,
-  variableWidth: true
+  variableWidth: true,
+  responsive:[{
+    breakpoint: 600,
+    settings:{
+      infinite: false,
+      variableWidth: false
+    }
+  }]
 };
 
 export default class Blog extends Component {
@@ -29,24 +36,24 @@ export default class Blog extends Component {
       .then(data => this.setState(data));
   }
   render() {
+    const featured = [
+      <div>
+        <Slide {...this.state.featured} key={`swiper--1`} />
+      </div>
+    ];
+    const elements = this.state.lists.map((element, index) => (
+      <div>
+        <Slide {...element} key={`swiper-${index}`} />
+      </div>
+    ));
     return (
       <section id="blog">
         <h3 className="section__title__background">What i write</h3>
-        <Slider {...sliderSettings}>
-          {(() => {
-            const featured = [
-              <div>
-                <Slide {...this.state.featured} key={`swiper--1`} />
-              </div>
-            ];
-            const elements = this.state.lists.map((element, index) => (
-              <div>
-                <Slide {...element} key={`swiper-${index}`} />
-              </div>
-            ));
-            return [...featured, ...elements];
-          })()}
-        </Slider>
+        {!this.props.isMobile && <Slider {...sliderSettings}>
+          {(() => [...featured, ...elements] )()}
+        </Slider>}
+        {this.props.isMobile && <div>{(() => [...featured, ...elements] )()}</div>}
+        
       </section>
     );
   }

@@ -55,7 +55,7 @@ export default class Home extends Component {
       <section id="home">
         <canvas className="__absolute --topleft __under" id="homebackground" />
         <h1>Riccardo Canella</h1>
-        <p className="__fulltwo-tre">
+        <p className="__fulltwo-tre __mobile-full">
           From Italy living in Parma, where I work as a Frontend Developer at{" "}
           <a href="https://caffeina.com" target="_blank" rel="noopener">
             Caffeina

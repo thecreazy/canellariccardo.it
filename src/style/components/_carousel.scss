@@ -21,4 +21,24 @@
             font-family: $fontbase;
         }
     }
+    @media #{$small-and-down} {
+        width: 95%;
+        height: auto;
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: initial;
+        .slide__overlay{
+            padding-top: 53%;
+            padding-bottom: 40px;
+            background: transparent;
+            height: auto;
+            .slide__overlay__span{
+                margin: 0px;
+                max-width: 100%;
+            }
+        }
+    }
 }

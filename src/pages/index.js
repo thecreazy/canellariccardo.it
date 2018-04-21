@@ -51,11 +51,11 @@ export default class Index extends Component {
   render() {
     const partials = [Home,Blog]
     const isMobile = this.mobileCheck()
-    fullPageOptions.slides = partials.map(Element => (<Slide><Element /></Slide>));
+    fullPageOptions.slides = partials.map(Element => (<Slide><Element isMobile={isMobile} /></Slide>));
     if (isMobile) {
       return (
         <div>
-          {partials.map(Element => <Element />)}
+          {partials.map(Element => <Element isMobile={isMobile} />)}
         </div>
       );
     } else {

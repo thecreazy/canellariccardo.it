@@ -29,6 +29,16 @@ section{
         color: $lighttext;
         width: 100%;
     }
+    @media #{$small-and-down} {
+        padding: 30px 10px;
+        overflow: hidden;
+        height: 100%;
+        .section__title__background{
+            font-size: 4rem;
+            position: relative;
+            margin-bottom: 80px;
+        }
+    }
 }
 
 h1{
