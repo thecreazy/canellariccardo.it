@@ -21,6 +21,7 @@ export default class Index extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      isMobile: this.mobileCheck(),
       active: {
         Fullpage: 0,
         horizontalSlider1: 0
@@ -48,9 +49,19 @@ export default class Index extends Component {
     return check;
   };
 
+  componentDidMount(){
+    if(window){
+      window.addEventListener("resize", ()=>{
+        this.setState({
+          isMobile: this.mobileCheck(),
+        })
+      });
+    }
+  }
+
   render() {
     const partials = [Home,Blog]
-    const isMobile = this.mobileCheck()
+    const { isMobile } = this.state
     fullPageOptions.slides = partials.map(Element => (<Slide><Element isMobile={isMobile} /></Slide>));
     if (isMobile) {
       return (
