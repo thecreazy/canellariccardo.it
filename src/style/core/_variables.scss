@@ -16,6 +16,7 @@ $fontbase:             'Roboto', sans-serif;
 $fontparag:            'Roboto Mono', monospace;
 
 $goldgradient:          linear-gradient(110deg, $gold 0%, $gold 33%, #d8c498 44%, #775f2d 55%, $gold 67%, $gold 100%);
+$whitegradient:         linear-gradient(110deg, white 0%, white 100%);
 $overlay:             rgba(0, 0, 0, 0.5);
 
 $small-screen-up: 601px !default;

@@ -7,12 +7,16 @@ export default class Slide extends Component {
       <div
         className="slide"
         style={{
-          backgroundImage: `url(${this.props.image})`
+          backgroundImage: `url(${props.image})`
         }}
       >
-        <div className="slide__overlay">
-          <span className="slide__overlay__span">{this.props.title}</span>
-        </div>
+          <div className="slide__overlay">
+         
+              <span className="slide__overlay__span">
+              <a className="--noeffect" href={props.link} target="_blank" rel="noopener">{props.title}
+              </a></span>
+             
+          </div>
       </div>
     );
   }

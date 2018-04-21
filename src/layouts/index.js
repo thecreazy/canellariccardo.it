@@ -9,7 +9,7 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="Riccardo Canella - On the road developer"
       meta={[
-        { name: "description", content: "Riccardo Canella site" },
+        { name: "description", content: "Riccardo Canella Site" },
         {
           name: "keywords",
           content:
