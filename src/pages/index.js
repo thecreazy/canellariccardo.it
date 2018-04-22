@@ -22,6 +22,7 @@ export default class Index extends Component {
     super(props);
     this.state = {
       isMobile: this.mobileCheck(),
+      Fullpage: 0,
       active: {
         Fullpage: 0,
         horizontalSlider1: 0
@@ -32,7 +33,8 @@ export default class Index extends Component {
     this.mobileCheck = this.mobileCheck.bind(this);
   }
 
-  onSlideChangeStart(name, props, state, newState) {}
+  onSlideChangeStart(name, props, state, newState) {
+  }
 
   onSlideChangeEnd(name, props, state, newState) {
     const oldActive = this.state.active;
@@ -62,26 +64,36 @@ export default class Index extends Component {
   }
 
   componentDidMount() {
+    const { isMobile } = this.state;
     if (window) {
+      const _height = window.innerHeight;
       window.addEventListener("resize", () => {
         this.setState({
           isMobile: this.mobileCheck()
         });
       });
+      if(isMobile){
+        window.addEventListener("scroll",()=>{
+          const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
+          if(scrollTop >= _height/3) this.setState({Fullpage : 1})
+        })
+      }
+      
     }
   }
 
   render() {
     const partials = [Home, Blog];
     const { isMobile } = this.state;
+    const slideNumber = this.state.Fullpage;
     fullPageOptions.slides = partials.map(Element => (
       <Slide>
-        <Element isMobile={isMobile} />
+        <Element isMobile={isMobile} actualSlide={slideNumber}/>
       </Slide>
     ));
     if (isMobile) {
       return (
-        <div>{partials.map(Element => <Element isMobile={isMobile} />)}</div>
+        <div>{partials.map(Element => <Element isMobile={isMobile} actualSlide={slideNumber} />)}</div>
       );
     } else {
       return (

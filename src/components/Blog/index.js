@@ -38,14 +38,17 @@ export default class Blog extends Component {
       .then(data => this.setState(data));
   }
   render() {
+    const { actualSlide, isMobile } = this.props
+    let showImages = true
+    if(actualSlide < 1 ) showImages = false;
     const featured = this.state.featured ? [
       <div>
-        <Slide {...this.state.featured} key={`swiper--1`} />
+        <Slide showImages={showImages} {...this.state.featured} key={`swiper--1`} />
       </div>
     ]: [];
     const elements = this.state.lists.map((element, index) => (
       <div>
-        <Slide {...element} key={`swiper-${index}`} />
+        <Slide showImages={showImages} {...element} key={`swiper-${index}`} />
       </div>
     ));
     return (
