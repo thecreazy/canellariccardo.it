@@ -38,11 +38,11 @@ export default class Blog extends Component {
       .then(data => this.setState(data));
   }
   render() {
-    const featured = [
+    const featured = this.state.featured ? [
       <div>
         <Slide {...this.state.featured} key={`swiper--1`} />
       </div>
-    ];
+    ]: [];
     const elements = this.state.lists.map((element, index) => (
       <div>
         <Slide {...element} key={`swiper-${index}`} />
