@@ -9,6 +9,7 @@
     "gatsby-link": "^1.6.38",
     "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-google-analytics": "^1.0.31",
+    "gatsby-plugin-google-fonts": "^0.0.4",
     "gatsby-plugin-manifest": "^1.0.20",
     "gatsby-plugin-offline": "^1.0.15",
     "gatsby-plugin-react-helmet": "^2.0.6",
@@ -16,7 +17,8 @@
     "isomorphic-fetch": "^2.2.1",
     "react-helmet": "^5.2.0",
     "react-slick": "^0.20.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "webfontloader": "^1.6.28"
   },
   "keywords": [
     "gatsby",
