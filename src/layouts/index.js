@@ -22,6 +22,7 @@ class TemplateWrapper extends Component{
   render(){
     const { children } = this.props
     return   <div>
+      <noscript>Your browser does not support JavaScript!</noscript>
       <Helmet
         htmlAttributes={{
           lang: "en"
