@@ -1,4 +1,4 @@
-var manifestOptions = {
+const manifestOptions = {
   name: "Riccardo Canella",
   short_name: "RCanella",
   start_url: "/",
@@ -8,7 +8,7 @@ var manifestOptions = {
   icon: "src/imgs/icon.png"
 }
 
-var faviconOptions = {
+const faviconOptions = {
   logo: "./src/imgs/favicon.png",
   injectHTML: true,
   icons: {
@@ -24,11 +24,27 @@ var faviconOptions = {
   }
 }
 
-var analyticsOptions = {
+const analyticsOptions = {
   trackingId: "UA-55764472-1",
   head: true,
   anonymize: true,
 }
+
+const rootDir = './';
+
+const offilineOptions = {
+  cacheId: `canellariccardo-cache`,
+  runtimeCaching: [
+    {
+      urlPattern: /^https:\/\/backend.canellariccardo\.it\/medium/,
+      handler: 'fastest'
+    },
+    {
+      urlPattern: /\.(?:png|jpg|jpeg|webp|svg|gif|tiff)$/,
+      handler: `fastest`,
+    },
+  ],
+};
 
 module.exports = {
   siteMetadata: {
@@ -51,6 +67,10 @@ module.exports = {
               {
                 resolve: `gatsby-plugin-google-analytics`,
                 options: analyticsOptions
+              },
+              {
+                resolve: `gatsby-plugin-offline`,
+                options: offilineOptions
               }
           ]
 };
