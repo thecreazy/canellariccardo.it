@@ -66,19 +66,19 @@ export default class Home extends Component {
         </p>
         <h2>ON THE ROAD DEVELOPER</h2>
         <p className="social">
-          <a target="_blank" href={config.social.facebook}>
+          <a target="_blank" rel="noopener" href={config.social.facebook}>
             <span className="icon-facebook" />
           </a>
-          <a target="_blank" href={config.social.twitter}>
+          <a target="_blank" rel="noopener" href={config.social.twitter}>
             <span className="icon-twitter" />
           </a>
-          <a target="_blank" href={config.social.instagram}>
+          <a target="_blank" rel="noopener" href={config.social.instagram}>
             <span className="icon-instagram" />
           </a>
-          <a target="_blank" href={config.social.linkedin}>
+          <a target="_blank" rel="noopener" href={config.social.linkedin}>
             <span className="icon-linkedin" />
           </a>
-          <a target="_blank" href={config.social.github}>
+          <a target="_blank" rel="noopener" href={config.social.github}>
             <span className="icon-github" />
           </a>
         </p>

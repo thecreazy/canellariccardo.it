@@ -7,6 +7,9 @@ import "./index.scss";
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
+      htmlAttributes={{
+        lang: "en"
+      }}
       title="Riccardo Canella - On the road developer"
       meta={[
         { name: "description", content: "Riccardo Canella Site" },
