@@ -20,7 +20,7 @@ export default class Photos extends Component {
   render() {
     return (
       <section id="photos" className="--column">
-      <h3 className="section__title__background">What i shot</h3>
+        <h3 className="section__title__background">What i shot</h3>
         {this.state.pics.map((pic, index) => (
           <Pic {...pic} key={`pic--${index}`} />
         ))}

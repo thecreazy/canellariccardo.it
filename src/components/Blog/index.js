@@ -14,13 +14,15 @@ const sliderSettings = {
   slidesToScroll: 1,
   centerMode: true,
   variableWidth: true,
-  responsive:[{
-    breakpoint: 600,
-    settings:{
-      infinite: false,
-      variableWidth: false
+  responsive: [
+    {
+      breakpoint: 600,
+      settings: {
+        infinite: false,
+        variableWidth: false
+      }
     }
-  }]
+  ]
 };
 
 export default class Blog extends Component {
@@ -49,11 +51,14 @@ export default class Blog extends Component {
     return (
       <section id="blog">
         <h3 className="section__title__background">What i write</h3>
-        {!this.props.isMobile && <Slider {...sliderSettings}>
-          {(() => [...featured, ...elements] )()}
-        </Slider>}
-        {this.props.isMobile && <div>{(() => [...featured, ...elements] )()}</div>}
-        
+        {!this.props.isMobile && (
+          <Slider {...sliderSettings}>
+            {(() => [...featured, ...elements])()}
+          </Slider>
+        )}
+        {this.props.isMobile && (
+          <div>{(() => [...featured, ...elements])()}</div>
+        )}
       </section>
     );
   }

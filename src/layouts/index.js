@@ -20,11 +20,11 @@ const TemplateWrapper = ({ children }) => (
         }
       ]}
     />
+    {children()}
     <link
       href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono"
       rel="stylesheet"
     />
-    {children()}
   </div>
 );
 
