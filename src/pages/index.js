@@ -33,8 +33,7 @@ export default class Index extends Component {
     this.mobileCheck = this.mobileCheck.bind(this);
   }
 
-  onSlideChangeStart(name, props, state, newState) {
-  }
+  onSlideChangeStart(name, props, state, newState) {}
 
   onSlideChangeEnd(name, props, state, newState) {
     const oldActive = this.state.active;
@@ -72,28 +71,49 @@ export default class Index extends Component {
           isMobile: this.mobileCheck()
         });
       });
-      if(isMobile){
-        window.addEventListener("scroll",()=>{
-          const scrollTop = window.pageYOffset || (document.documentElement || document.body.parentNode || document.body).scrollTop
-          if(scrollTop >= _height/3) this.setState({Fullpage : 1})
-        })
+      if (isMobile) {
+        window.addEventListener("scroll", () => {
+          const scrollTop =
+            window.pageYOffset ||
+            (
+              document.documentElement ||
+              document.body.parentNode ||
+              document.body
+            ).scrollTop;
+          if (scrollTop >= _height / 3) this.setState({ Fullpage: 1 });
+          if (scrollTop >= _height + _height / 3)
+            this.setState({ Fullpage: 2 });
+        });
       }
-      
     }
   }
 
   render() {
-    const partials = [Home, Blog];
+    const partials = [Home, Blog, Photos];
     const { isMobile } = this.state;
     const slideNumber = this.state.Fullpage;
-    fullPageOptions.slides = partials.map(Element => (
+    fullPageOptions.slides = partials.map((Element, index) => (
       <Slide>
-        <Element isMobile={isMobile} actualSlide={slideNumber}/>
+        <Element
+          isMobile={isMobile}
+          key={`section-${index}`}
+          index={index}
+          actualSlide={slideNumber}
+        />
       </Slide>
     ));
     if (isMobile) {
       return (
-        <div>{partials.map(Element => <Element isMobile={isMobile} actualSlide={slideNumber} />)}</div>
+        <div>
+          {partials.map((Element, index) => (
+            <Element
+              key={`section-${index}`}
+              index={index}
+              isMobile={isMobile}
+              actualSlide={slideNumber}
+            />
+          ))}
+        </div>
       );
     } else {
       return (

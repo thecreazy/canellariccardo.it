@@ -38,14 +38,19 @@ export default class Blog extends Component {
       .then(data => this.setState(data));
   }
   render() {
-    const { actualSlide, isMobile } = this.props
-    let showImages = true
-    if(actualSlide < 1 ) showImages = false;
-    const featured = this.state.featured ? [
-      <div>
-        <Slide showImages={showImages} {...this.state.featured} key={`swiper--1`} />
-      </div>
-    ]: [];
+    const { actualSlide, isMobile, index } = this.props;
+    let showImages = !!(actualSlide >= index);
+    const featured = this.state.featured
+      ? [
+          <div>
+            <Slide
+              showImages={showImages}
+              {...this.state.featured}
+              key={`swiper--1`}
+            />
+          </div>
+        ]
+      : [];
     const elements = this.state.lists.map((element, index) => (
       <div>
         <Slide showImages={showImages} {...element} key={`swiper-${index}`} />

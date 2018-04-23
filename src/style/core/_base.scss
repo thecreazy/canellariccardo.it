@@ -20,6 +20,10 @@ section{
         flex-direction: column;
         flex-wrap: wrap;
     }
+    &.--row{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     .section__title__background{
         font-size: 18rem;
         position: absolute;

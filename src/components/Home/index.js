@@ -66,19 +66,44 @@ export default class Home extends Component {
         </p>
         <h2>ON THE ROAD DEVELOPER</h2>
         <p className="social">
-          <a aria-label="Facebook" target="_blank" rel="noopener" href={config.social.facebook}>
+          <a
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener"
+            href={config.social.facebook}
+          >
             <span className="icon-facebook" />
           </a>
-          <a aria-label="Twitter" target="_blank" rel="noopener" href={config.social.twitter}>
+          <a
+            aria-label="Twitter"
+            target="_blank"
+            rel="noopener"
+            href={config.social.twitter}
+          >
             <span className="icon-twitter" />
           </a>
-          <a aria-label="Instagram" target="_blank" rel="noopener" href={config.social.instagram}>
+          <a
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener"
+            href={config.social.instagram}
+          >
             <span className="icon-instagram" />
           </a>
-          <a aria-label="Linkedin" target="_blank" rel="noopener" href={config.social.linkedin}>
+          <a
+            aria-label="Linkedin"
+            target="_blank"
+            rel="noopener"
+            href={config.social.linkedin}
+          >
             <span className="icon-linkedin" />
           </a>
-          <a aria-label="Github" target="_blank" rel="noopener" href={config.social.github}>
+          <a
+            aria-label="Github"
+            target="_blank"
+            rel="noopener"
+            href={config.social.github}
+          >
             <span className="icon-github" />
           </a>
         </p>

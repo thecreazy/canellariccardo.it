@@ -7,8 +7,8 @@ export default class Slide extends Component {
       <div
         className="slide"
         style={{
-          backgroundImage: props.showImages ? `url(${props.image})` : '',
-          opacity:  props.showImages ? 1 : 0
+          backgroundImage: props.showImages ? `url(${props.image})` : "",
+          opacity: props.showImages ? 1 : 0
         }}
       >
         <div className="slide__overlay">

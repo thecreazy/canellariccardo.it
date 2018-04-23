@@ -19,3 +19,14 @@
 .__under{
     z-index: -1;
 }
+
+.__onlymobile{
+    display: none;
+    @media #{$small-and-down} {
+        display: block;
+    }
+}
+
+.__nopadding{
+    padding: 0;
+}

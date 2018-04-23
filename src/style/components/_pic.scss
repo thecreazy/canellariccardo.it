@@ -1,7 +1,19 @@
 .pic{
-    width: 25.3%;
+    width: 20%;
     border: 2px $gold solid;
+    opacity: .3;
+    display: flex;
+    align-items: center;
+    background: white;
+    transition: all .5s;
+    &.--hide{
+        opacity: 0;
+    }
     .pic_img{
         max-width: 100%;
+    }
+    @media #{$small-and-down} {
+        width: 45%;
+        opacity: 1;
     }
 }
