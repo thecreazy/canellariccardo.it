@@ -1,0 +1,30 @@
+.information{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    width: 350px;
+    max-width: none;
+    height: 350px;
+    padding: 1rem;
+    transform: translateY(-50%);
+    background: $background;
+    color: $gold;
+    transition: all ease-in .3s;
+    z-index: 99;
+    &:hover{
+        transform: translateY(-50%) scale(1.05);
+    }
+    .information__title, .information__social{
+        text-align: center;
+        text-transform: uppercase;
+    }
+    @media #{$small-and-down} {
+        display: block;
+        position: unset;
+        left: 0;
+        top: 0;
+        transform: unset;
+        width: 100%;
+        height: auto;
+    }
+}

@@ -8,14 +8,15 @@ import Lab from "../components/Lab";
 import Photos from "../components/Photos";
 
 const fullPageOptions = {
-  scrollSensitivity: 2,
-  touchSensitivity: 2,
+  scrollSensitivity: 20,
+  touchSensitivity: 20,
   scrollSpeed: 300,
   resetSlides: true,
   hideScrollBars: true,
   enableArrowKeys: true,
   activeSlide: 0
 };
+console.log(fullPageOptions);
 
 export default class Index extends Component {
   constructor(props) {

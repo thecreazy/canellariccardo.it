@@ -22,9 +22,58 @@ export default class Photos extends Component {
     let showImages = !!(actualSlide >= index);
     return (
       <section id="photos" className="--row __nopadding">
-        <h3 className="section__title__background __onlymobile">What i shot</h3>
+        <div className="information">
+          <p className="information__title">Follow me</p>
+          <p className="social information__social">
+            <a
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener"
+              href={config.social.facebook}
+            >
+              <span className="icon-facebook" />
+            </a>
+            <a
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener"
+              href={config.social.twitter}
+            >
+              <span className="icon-twitter" />
+            </a>
+            <a
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener"
+              href={config.social.instagram}
+            >
+              <span className="icon-instagram" />
+            </a>
+            <a
+              aria-label="Linkedin"
+              target="_blank"
+              rel="noopener"
+              href={config.social.linkedin}
+            >
+              <span className="icon-linkedin" />
+            </a>
+            <a
+              aria-label="Github"
+              target="_blank"
+              rel="noopener"
+              href={config.social.github}
+            >
+              <span className="icon-github" />
+            </a>
+          </p>
+        </div>
         {this.state.pics.map((pic, index) => (
-          <Pic {...pic} showPic={showImages} key={`pic--${index}`} />
+          <Pic
+            {...pic}
+            link={config.social.instagram}
+            showPic={showImages}
+            key={`pic--${index}`}
+          />
         ))}
       </section>
     );

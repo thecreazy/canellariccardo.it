@@ -1,10 +1,9 @@
 .pic{
     width: 20%;
-    border: 2px $gold solid;
     opacity: .3;
     display: flex;
-    align-items: center;
     background: white;
+    align-items: center;
     transition: all .5s;
     &.--hide{
         opacity: 0;

@@ -7,7 +7,7 @@ export default class Pic extends Component {
       <a
         target="_blank"
         className={props.showPic ? "pic" : "pic --hide"}
-        href=""
+        href={props.link}
       >
         <img
           className="pic_img"
