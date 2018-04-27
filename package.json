@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "author": "Riccardo Canella <canella_riccardo@icloud.com>",
   "dependencies": {
-    "fullpage-react": "^3.0.29",
     "gatsby": "^1.9.223",
     "gatsby-link": "^1.6.38",
     "gatsby-plugin-favicon": "^2.1.1",
@@ -28,6 +27,7 @@
   "scripts": {
     "build": "gatsby build",
     "dev": "gatsby develop",
+    "serve": "gatsby serve",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -2,7 +2,7 @@
     width: 20%;
     opacity: .3;
     display: flex;
-    background: white;
+    background: $secondary;
     align-items: center;
     transition: all .5s;
     &.--hide{
