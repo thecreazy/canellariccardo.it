@@ -12,3 +12,12 @@ You can find the online version on [canellariccardo.it](https://canellariccardo.
 ## Lightouse 
 
 This site is optimized and respected (more or less: D) all lightouse points
+
+<img alt="Lighthouse" src="https://github.com/thecreazy/canellariccardo.it/blob/master/assets/lighthouse.jpg" width="100">
+
+
+## Page speed tested
+
+<img alt="Desktop" src="https://github.com/thecreazy/canellariccardo.it/blob/master/assets/pagespeed_desktop.jpg" width="100%">
+
+<img alt="Mobile" src="https://github.com/thecreazy/canellariccardo.it/blob/master/assets/pagespeed_mobile.jpg" width="100%">
