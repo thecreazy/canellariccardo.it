@@ -12,6 +12,7 @@ export default class Pic extends Component {
         <img
           className="pic_img"
           alt={props.text}
+          rel="noopener"
           src={props.showPic ? props.images.standard_resolution.url : ""}
         />
       </a>
