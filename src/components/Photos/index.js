@@ -66,6 +66,15 @@ export default class Photos extends Component {
               <span className="icon-github" />
             </a>
           </p>
+          <p className="information__description">
+            The camera is an instrument that teaches people how to see without a
+            camera.
+          </p>
+          <p className="information__link">
+            <a rel="noopener" href={config.social.flickr} target="_blank">
+              Check out my last pics on Flickr
+            </a>
+          </p>
         </div>
         {this.state.pics.map((pic, index) => (
           <Pic

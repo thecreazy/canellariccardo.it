@@ -15,9 +15,9 @@ export default class Slide extends Component {
           <span className="slide__overlay__span">
             <a
               className="--noeffect"
+              rel="noopener"
               href={props.link}
               target="_blank"
-              rel="noopener"
             >
               {props.title}
             </a>

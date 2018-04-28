@@ -18,6 +18,17 @@
         text-align: center;
         text-transform: uppercase;
     }
+    .information__description{
+        text-align: center;
+        color: $textcolor;
+        font-size: 17px;
+        text-transform: none;
+        margin-top: 30px;
+    }
+    .information__link{
+        text-align: center;
+        font-size: 15px;
+    }
     @media #{$small-and-down} {
         display: block;
         position: unset;
