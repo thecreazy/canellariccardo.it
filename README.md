@@ -13,7 +13,7 @@ You can find the online version on [canellariccardo.it](https://canellariccardo.
 
 This site is optimized and respected (more or less: D) all lightouse points
 
-<img alt="Lighthouse" src="https://github.com/thecreazy/canellariccardo.it/blob/master/assets/lighthouse.jpg" width="100">
+<img alt="Lighthouse" src="https://github.com/thecreazy/canellariccardo.it/blob/master/assets/lighthouse.jpg" width="50%">
 
 
 ## Page speed tested
