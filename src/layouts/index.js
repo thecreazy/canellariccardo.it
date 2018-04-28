@@ -51,7 +51,8 @@ class TemplateWrapper extends Component {
             }
           ]}
         >
-          <meta property="description" content={description} />
+          <meta name="Description" content={description} />
+          <meta name="description" content={description} />
           <meta property="og:url" content="https://canellariccardo.it" />
           <meta property="og:title" content={title} />
           <meta property="og:site_name" content={title} />
