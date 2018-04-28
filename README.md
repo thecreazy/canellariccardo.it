@@ -1,9 +1,9 @@
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 
-# Canella Riccardo personal Site
-
 <img alt="Gatsby" src="https://github.com/thecreazy/canellariccardo.it/blob/master/src/imgs/icon.png?raw=true" width="100">
+
+# Canella Riccardo personal Site
 
 Site made with [Gatsby](https://github.com/thecreazy/gatsby)
 
