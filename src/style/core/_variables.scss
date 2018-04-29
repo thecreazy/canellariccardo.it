@@ -18,7 +18,7 @@ $fontparag:            'Roboto Mono', monospace;
 
 $goldgradient:          linear-gradient(110deg, $gold 0%, $gold 33%, #d8c498 44%, #775f2d 55%, $gold 67%, $gold 100%);
 $whitegradient:         linear-gradient(110deg, $secondary 0%, $secondary 100%);
-$overlay:             #00000045;
+$overlay:             unquote('#00000045');
 
 $small-screen-up: 601px !default;
 $medium-screen-up: 993px !default;

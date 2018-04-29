@@ -80,15 +80,8 @@ a{
         background-position-x: -150%;
     }
     &.--noeffect{
-        background: $whitegradient;
-        -webkit-text-fill-color: transparent;
-        -webkit-background-clip: text;
-        background-size: 300%;
-        text-decoration: none;
-        background-position-x: 0%;
-        transition: background 6s;
-        transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-        will-change: background, letter-spacing;
+        -webkit-text-fill-color: $secondary;
+        background: none;
     }
 }
 
