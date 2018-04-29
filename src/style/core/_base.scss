@@ -33,7 +33,7 @@ section{
         color: $lighttext;
         width: 100%;
     }
-    @media #{$small-and-down} {
+    @media #{$small-screen-portrait-and-down} {
         padding: 30px 10px;
         overflow: hidden;
         height: 100%;

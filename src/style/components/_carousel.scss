@@ -22,7 +22,7 @@
             font-family: $fontbase;
         }
     }
-    @media #{$small-and-down} {
+    @media #{$small-screen-portrait-and-down} {
         width: 95%;
         height: auto;
         margin: 0;
