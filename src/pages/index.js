@@ -57,7 +57,6 @@ export default class Index extends Component {
             document.body
           ).scrollTop;
         if (scrollTop >= _height / 3) newValue = 2;
-        if (scrollTop >= _height) newValue = 2;
         if (newValue > Fullpage) this.setState({ Fullpage: newValue });
       });
     }
