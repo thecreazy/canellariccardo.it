@@ -2,12 +2,11 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .slide{
-    width: 543px;
-    height: 305px;
-    margin: 0 100px;
+    width: 100%;
     background-position: center center;
     background-size: cover;
     transition: all .5s;
+    list-style: decimal;
     .slide__overlay{
         position: relative;
         width: 100%;

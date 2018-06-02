@@ -1,10 +1,12 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import Slider from "react-slick";
 import "whatwg-fetch";
 
 import config from "../../config";
 
 import Slide from "./slide";
+
+import articles from './articles'
 
 const sliderSettings = {
   infinite: true,
@@ -28,44 +30,27 @@ export default class Blog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lists: []
+      lists: articles
     };
-  }
-  componentWillMount() {
-    fetch(config.blogApi)
-      .then(response => response.json())
-      .then(data => this.setState(data));
   }
   render() {
     const { actualSlide, isMobile, index } = this.props;
-    let showImages = !!(actualSlide >= index);
-    const featured = this.state.featured
-      ? [
-          <div>
-            <Slide
-              showImages={showImages}
-              {...this.state.featured}
-              key={`swiper--1`}
-            />
-          </div>
-        ]
-      : [];
-    const elements = this.state.lists.map((element, index) => (
-      <div>
-        <Slide showImages={showImages} {...element} key={`swiper-${index}`} />
-      </div>
-    ));
+    const { lists } = this.state
+    const elements = lists.map((list,index) => <div key={`element-${list.year}-${index}`}>
+      <div className="section__divider">{list.year}</div>
+      <ul className="slide">
+        {list.articles.map((element, index) => (
+          <Slide {...element} />
+        ))}
+      </ul>
+    </div>)
+
     return (
       <section id="blog">
-        <h3 className="section__title__background">What i write</h3>
-        {!this.props.isMobile && (
-          <Slider {...sliderSettings}>
-            {(() => [...featured, ...elements])()}
-          </Slider>
-        )}
-        {this.props.isMobile && (
-          <div>{(() => [...featured, ...elements])()}</div>
-        )}
+        <div className="section__title__decorator">
+          <h2 className="section__title__background">What i write</h2>
+        </div>
+          <div>{(() => [...elements])()}</div>
       </section>
     );
   }

@@ -1,12 +1,15 @@
-$primary:              #282828;
+$primary:              #f9f9fa;
 $lightprimary:         #343434;
-$secondary:            #eef2f5;
+$secondary:            #282828;
 $darksecondary:        #cecece;
 $orange:               #FF5C3B;
 $pink:                 #FF2B67;
 $violet:               #7b4397;
 $red:                  #dc2430;
 $gold:                 #bc994e;
+$blue:                 #4e57ef;
+$lightBlue:            #cfd7ff;
+$green:                #66e2d5;
 
 
 $background:           $primary;
@@ -18,7 +21,7 @@ $fontparag:            'Roboto Mono', monospace;
 
 $goldgradient:          linear-gradient(110deg, $gold 0%, $gold 33%, #d8c498 44%, #775f2d 55%, $gold 67%, $gold 100%);
 $whitegradient:         linear-gradient(110deg, $secondary 0%, $secondary 100%);
-$overlay:             unquote('#00000045');
+$overlay:               unquote('#00000045');
 
 $small-screen-up: 601px !default;
 $medium-screen-up: 993px !default;

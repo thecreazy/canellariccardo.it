@@ -9,7 +9,6 @@ body{
 }
 
 section{
-    min-height: 100vh;
     padding: 62px 40px;
     display: flex;
     justify-content: center;
@@ -25,13 +24,32 @@ section{
         flex-wrap: wrap;
     }
     .section__title__background{
-        font-size: 18rem;
-        position: absolute;
-        text-align: center;
+        font-size: 4rem;
+        text-align: left;
         left: 0;
         margin: 0;
-        color: $lighttext;
+        color: $secondary;
         width: 100%;
+    }
+    .section__title__decorator{
+        background: $lightBlue;
+        border: 1px solid $blue;
+        box-shadow: 3px 4px 0px $blue;
+        width: 60%;
+        margin-bottom: 40px;
+        @media #{$small-and-down} {
+            width: 100%
+        }
+    }
+    .section__divider{
+        display: inline-block;
+        color: $secondary;
+        background: $green;
+        font-family: "Roboto Mono", monospace;
+        font-size: 2rem;
+        padding: 3px 10px;
+        border: 2px solid $secondary;
+        margin: 20px 0px;
     }
     @media #{$small-screen-portrait-and-down} {
         padding: 30px 10px;
@@ -41,7 +59,6 @@ section{
             font-size: 4rem;
             color: $secondary;
             position: relative;
-            margin-bottom: 80px;
         }
     }
 }
@@ -79,9 +96,13 @@ a{
     &:hover{
         background-position-x: -150%;
     }
-    &.--noeffect{
-        -webkit-text-fill-color: $secondary;
-        background: none;
+    &.--list{
+        font-family: "Roboto", sans-serif;
+        font-size: 1.45rem;
+        line-height: 2.45rem;
+        &:hover{
+            border-bottom: 5px solid $gold;
+        }
     }
 }
 
