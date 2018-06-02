@@ -47,8 +47,8 @@ export default class Index extends Component {
         });
       });
       window.addEventListener("scroll", () => {
-        const { Fullpage } = this.state
-        let newValue = 0
+        const { Fullpage } = this.state;
+        let newValue = 0;
         const scrollTop =
           window.pageYOffset ||
           (
@@ -56,9 +56,9 @@ export default class Index extends Component {
             document.body.parentNode ||
             document.body
           ).scrollTop;
-        if (scrollTop >= _height / 3) newValue = 1
-        if (scrollTop >= _height) newValue = 2
-        if(newValue > Fullpage) this.setState({ Fullpage: newValue });
+        if (scrollTop >= _height / 3) newValue = 1;
+        if (scrollTop >= _height) newValue = 2;
+        if (newValue > Fullpage) this.setState({ Fullpage: newValue });
       });
     }
   }
