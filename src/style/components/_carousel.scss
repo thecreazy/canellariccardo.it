@@ -22,14 +22,16 @@
         }
     }
     @media #{$small-screen-portrait-and-down} {
-        width: 95%;
+        width: 90%;
         height: auto;
-        margin: 0;
         margin-left: auto;
         margin-right: auto;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: initial;
+        li{
+            margin-bottom: 20px;
+        }
         .slide__overlay{
             padding-top: 53%;
             padding-bottom: 40px;

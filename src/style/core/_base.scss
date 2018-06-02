@@ -104,6 +104,11 @@ a{
             border-bottom: 5px solid $gold;
         }
     }
+    @media #{$small-and-down} {
+        background: none;
+        color: $gold;
+        -webkit-text-fill-color: $gold;
+    }
 }
 
 .social{
