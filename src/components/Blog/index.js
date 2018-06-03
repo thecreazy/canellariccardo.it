@@ -40,7 +40,7 @@ export default class Blog extends Component {
       <div key={`element-${list.year}-${index}`}>
         <div className="section__divider">{list.year}</div>
         <ul className="slide">
-          {list.articles.map((element, index) => <Slide {...element} />)}
+          {list.articles.map((element, index) => <Slide key={`article-${index}`} {...element} />)}
         </ul>
       </div>
     ));

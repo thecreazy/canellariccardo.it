@@ -43,7 +43,7 @@ export default [
         title: "My 2018 Nerd TODO list",
         publication: "Personal",
         link:
-          "https://medium.com/@riccardocanella/my-2018-nerd-todo-list-53090c37eddac"
+          "https://medium.com/@riccardocanella/my-2018-nerd-todo-list-53090c37edda"
       },
       {
         title: "My first experience with React VR",

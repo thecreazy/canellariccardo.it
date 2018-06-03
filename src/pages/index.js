@@ -56,14 +56,14 @@ export default class Index extends Component {
             document.body.parentNode ||
             document.body
           ).scrollTop;
-        if (scrollTop >= _height / 3) newValue = 2;
+        if (scrollTop >= _height / 3) newValue = 3;
         if (newValue > Fullpage) this.setState({ Fullpage: newValue });
       });
     }
   }
 
   render() {
-    const partials = [Home, Blog, Photos];
+    const partials = [Home, Lab, Blog, Photos];
     const { isMobile } = this.state;
     const slideNumber = this.state.Fullpage;
     return (

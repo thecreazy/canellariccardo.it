@@ -45,7 +45,7 @@ section{
         display: inline-block;
         color: $secondary;
         background: $green;
-        font-family: "Roboto Mono", monospace;
+        font-family: $fontparag;
         font-size: 2rem;
         padding: 3px 10px;
         border: 2px solid $secondary;
@@ -97,12 +97,25 @@ a{
         background-position-x: -150%;
     }
     &.--list{
-        font-family: "Roboto", sans-serif;
+        font-family: $fontbase;
         font-size: 1.45rem;
         line-height: 2.45rem;
         &:hover{
             border-bottom: 5px solid $gold;
         }
+    }
+    .tag{
+        border: 2px solid transparent;
+        border-radius: 3px;
+        text-align: center;
+        background: $darkBlue;
+        color: $primary;
+        letter-spacing: 1px;
+        -webkit-text-fill-color: white;
+        padding: 0px 5px;
+        font-family: $fontparag;
+        font-size: 15px;
+        text-transform: uppercase;
     }
     @media #{$small-and-down} {
         background: none;
