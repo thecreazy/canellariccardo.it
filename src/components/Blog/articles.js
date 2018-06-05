@@ -1,10 +1,13 @@
 export default [
   {
     year: 2018,
-    articles: [
+    articles: [{
+        title: "How I automated my Twitter account",
+        publication: "Hacker Noon",
+        link: "https://hackernoon.com/how-i-automated-my-twitter-account-7668fc8098b"
+      },
       {
-        title:
-          "An intro to responsive image optimization with HTML5 and Intersection Observer",
+        title: "An intro to responsive image optimization with HTML5 and Intersection Observer",
         publication: "freeNodeCamp",
         link:
           "https://medium.freecodecamp.org/an-intro-to-responsive-image-optimization-with-html5-and-intersection-observer-2a4fbe1473c1"
