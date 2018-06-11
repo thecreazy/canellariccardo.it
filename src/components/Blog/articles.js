@@ -2,6 +2,10 @@ export default [
   {
     year: 2018,
     articles: [{
+      title: "How you can improve your workflow using the JavaScript console",
+      publication: "freeNodeCamp",
+      link: "https://medium.freecodecamp.org/how-you-can-improve-your-workflow-using-the-javascript-console-bdd7823a9472"
+    },{
         title: "How I automated my Twitter account",
         publication: "Hacker Noon",
         link: "https://hackernoon.com/how-i-automated-my-twitter-account-7668fc8098b"
