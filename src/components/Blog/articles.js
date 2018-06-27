@@ -2,6 +2,10 @@ export default [
   {
     year: 2018,
     articles: [{
+      title: "Improve your cache using the haded IndexedDB",
+      publication: "personal",
+      link: "https://medium.com/@riccardocanella/improve-your-cache-using-the-hated-indexeddb-adbd0f65cb7c"
+    },{
       title: "How you can improve your workflow using the JavaScript console",
       publication: "freeNodeCamp",
       link: "https://medium.freecodecamp.org/how-you-can-improve-your-workflow-using-the-javascript-console-bdd7823a9472"
