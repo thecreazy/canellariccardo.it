@@ -2,6 +2,10 @@ export default [
   {
     year: 2018,
     articles: [{
+      title: "Clean Code saves Devs. The Caffeina approach to ReactJS",
+      publication: "caffeina",
+      link: "https://developers.caffeina.com/clean-code-saves-devs-the-caffeina-approach-to-reactjs-1b56ad15aa64"
+    },{
       title: "Improve your cache using the haded IndexedDB",
       publication: "personal",
       link: "https://medium.com/@riccardocanella/improve-your-cache-using-the-hated-indexeddb-adbd0f65cb7c"
