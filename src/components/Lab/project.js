@@ -1,4 +1,8 @@
 export default [{
+    name: 'react-imagezoomer',
+    description: 'React component for zoom an image on mouse over',
+    link: 'https://github.com/caffeinalab/react-imagezoomer'
+},{
     name: 'canellariccardo.it',
     description: 'My personal site (this!)',
     link: 'https://github.com/thecreazy/canellariccardo.it'
