@@ -1,4 +1,8 @@
 export default [{
+    name: 'common-loggo',
+    description: 'Fancy log library for your browser.',
+    link: 'https://github.com/thecreazy/common-loggo'
+},{
     name: 'react-imagezoomer',
     description: 'React component for zoom an image on mouse over',
     link: 'https://github.com/caffeinalab/react-imagezoomer'
