@@ -50,9 +50,8 @@ module.exports = {
   siteMetadata: {
     title: 'Riccardo Canella',
   },
-  plugins: [{
-                resolve: `gatsby-plugin-sass`
-              }, 
+  plugins: [ 
+    `gatsby-plugin-sass`, 
               {
                 resolve: `gatsby-plugin-react-helmet`
               },

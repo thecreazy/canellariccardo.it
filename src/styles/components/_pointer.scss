@@ -1,0 +1,11 @@
+.pointer{
+ border-radius: 99px;
+ background-color: transparent;
+ border: 2px solid $gold;
+ width: 20px;
+ height: 20px;
+ margin-top: 25px;
+ margin-left: 25px;
+ position: absolute;
+ pointer-events: none;
+}

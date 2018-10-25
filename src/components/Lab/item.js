@@ -5,7 +5,7 @@ export default class Item extends Component {
     const props = this.props;
     return (
       <li>
-        <a className="--list" rel="noopener" href={props.link} target="_blank">
+        <a className="--list" rel="noopener noreferrer" href={props.link} target="_blank">
           <span className="tag">{props.name}</span> {props.description}
         </a>
       </li>

@@ -12,13 +12,14 @@ export default class Photos extends Component {
       pics: []
     };
   }
+  // eslint-disable-next-line
   componentWillMount() {
     fetch(config.picsApi)
       .then(response => response.json())
       .then(data => this.setState({ pics: data }));
   }
   render() {
-    const { actualSlide, isMobile, index } = this.props;
+    const { actualSlide, index } = this.props;
     let showImages = !!(actualSlide >= index);
     return (
       <section id="photos" className="--row __nopadding">
@@ -28,7 +29,7 @@ export default class Photos extends Component {
             <a
               aria-label="Facebook"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer" 
               href={config.social.facebook}
             >
               <span className="icon-facebook" />
@@ -36,7 +37,7 @@ export default class Photos extends Component {
             <a
               aria-label="Twitter"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer" 
               href={config.social.twitter}
             >
               <span className="icon-twitter" />
@@ -44,7 +45,7 @@ export default class Photos extends Component {
             <a
               aria-label="Instagram"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer" 
               href={config.social.instagram}
             >
               <span className="icon-instagram" />
@@ -52,7 +53,7 @@ export default class Photos extends Component {
             <a
               aria-label="Linkedin"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer" 
               href={config.social.linkedin}
             >
               <span className="icon-linkedin" />
@@ -60,7 +61,7 @@ export default class Photos extends Component {
             <a
               aria-label="Github"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer" 
               href={config.social.github}
             >
               <span className="icon-github" />
@@ -71,7 +72,7 @@ export default class Photos extends Component {
             camera.
           </p>
           <p className="information__link">
-            <a rel="noopener" href={config.social.flickr} target="_blank">
+            <a rel="noopener noreferrer"  href={config.social.flickr} target="_blank">
               Check out my last pics on Flickr
             </a>
           </p>

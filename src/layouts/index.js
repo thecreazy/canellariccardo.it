@@ -1,10 +1,18 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import Helmet from "react-helmet";
+import { Trail, animated } from 'react-spring'
 
-import "./index.scss";
+import "../styles/main.scss";
 
+const items = new Array(1).fill(0).map((_, i) => i)
 class TemplateWrapper extends Component {
+
+  state = { coords: [0, 0] }
+
+  handleMouseMove = ({ pageX, pageY }) => this.setState({ coords: [pageX, pageY] })
+  
+  transform = (x, y) => `translate3d(${x - 35}px, ${y - 35}px, 0)`
+
   componentDidMount() {
     if (typeof window !== `undefined`) {
       const WebFont = require("webfontloader");
@@ -14,7 +22,13 @@ class TemplateWrapper extends Component {
         }
       });
     }
+    window.addEventListener('mousemove', this.handleMouseMove);
   }
+
+  componentWillUnmount(){
+    window.removeEventListener('mousemove',  this.handleMouseMove);
+  }
+
   render() {
     const { children } = this.props;
     const schemaOrgJSONLD = {
@@ -36,6 +50,16 @@ class TemplateWrapper extends Component {
       "From Italy living in Parma, where I work as a Frontend Developer. With a fullstack javascript background, my strength lies in websites and apps.";
     return (
       <div>
+        <Trail native items={items} to={this.state}>
+          {(item, i) => props => (
+            <animated.div
+              className="pointer"
+              style={{
+                zIndex: items.length - i,
+                transform: props.coords.interpolate(this.transform)
+              }} />
+          )}
+        </Trail>
         <noscript>Your browser does not support JavaScript!</noscript>
         <Helmet
           htmlAttributes={{
@@ -67,13 +91,10 @@ class TemplateWrapper extends Component {
             {JSON.stringify(schemaOrgJSONLD)}
           </script>
         </Helmet>
-        {children()}
+        {children}
       </div>
     );
   }
 }
-TemplateWrapper.propTypes = {
-  children: PropTypes.func
-};
 
 export default TemplateWrapper;

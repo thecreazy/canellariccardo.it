@@ -1,22 +1,46 @@
-import React, { Component } from "react";
-import { Fullpage, HorizontalSlider, Slide } from "fullpage-react";
+/* eslint-disable */
+import React, { Component, Fragment } from "react";
+
+import Layout from "../layouts";
 
 import Home from "../components/Home";
 import Blog from "../components/Blog";
 import Lab from "../components/Lab";
 import Photos from "../components/Photos";
 
+
 export default class Index extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isMobile: this.mobileCheck(),
-      Fullpage: 0,
+      actualSlide: 0,
       active: {
-        Fullpage: 0,
+        actualSlide: 0,
         horizontalSlider1: 0
       }
     };
+  }
+
+  handleResize = _ => {
+    this.setState({
+      isMobile: this.mobileCheck()
+    });
+  }
+
+  handleScroll = _ => {
+    const { actualSlide } = this.state;
+    const _height = window.innerHeight;
+    let newValue = 0;
+    const scrollTop =
+      window.pageYOffset ||
+      (
+        document.documentElement ||
+        document.body.parentNode ||
+        document.body
+      ).scrollTop;
+    if (scrollTop >= _height / 3 ) newValue = 3;
+    if (newValue > actualSlide) this.setState({ actualSlide: newValue });
   }
 
   mobileCheck() {
@@ -24,6 +48,7 @@ export default class Index extends Component {
     if (typeof navigator === "undefined" || !navigator) return false;
     let check = false;
     (function(a) {
+      // eslint-disable-next-line
       if (
         /(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(
           a
@@ -40,43 +65,34 @@ export default class Index extends Component {
   componentDidMount() {
     const { isMobile } = this.state;
     if (window) {
-      const _height = window.innerHeight;
-      window.addEventListener("resize", () => {
-        this.setState({
-          isMobile: this.mobileCheck()
-        });
-      });
-      window.addEventListener("scroll", () => {
-        const { Fullpage } = this.state;
-        let newValue = 0;
-        const scrollTop =
-          window.pageYOffset ||
-          (
-            document.documentElement ||
-            document.body.parentNode ||
-            document.body
-          ).scrollTop;
-        if (scrollTop >= _height / 3) newValue = 3;
-        if (newValue > Fullpage) this.setState({ Fullpage: newValue });
-      });
+      window.addEventListener("resize", this.handleResize);
+      window.addEventListener("scroll", this.handleScroll);
+      
     }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.handleResize);
+    window.removeEventListener("scroll", this.handleScroll);
   }
 
   render() {
     const partials = [Home, Lab, Blog, Photos];
     const { isMobile } = this.state;
-    const slideNumber = this.state.Fullpage;
+    const {actualSlide} = this.state;
     return (
-      <div>
+      <Layout>
+        <Fragment>
         {partials.map((Element, index) => (
           <Element
             key={`section-${index}`}
             index={index}
             isMobile={isMobile}
-            actualSlide={slideNumber}
+            actualSlide={actualSlide}
           />
         ))}
-      </div>
+        </Fragment>
+      </Layout>
     );
   }
 }

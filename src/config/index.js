@@ -7,7 +7,8 @@ const config = {
     twitter: "https://twitter.com/ricanella92",
     github: "https://github.com/thecreazy",
     instagram: "https://www.instagram.com/thecrz/",
-    flickr: "https://www.flickr.com/photos/79605117@N03/"
+    flickr: "https://www.flickr.com/photos/79605117@N03/",
+    linkedin: "https://www.linkedin.com/in/riccardocanella/"
   }
 };
 export default config;
