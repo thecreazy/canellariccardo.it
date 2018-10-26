@@ -37,11 +37,11 @@ const offilineOptions = {
   runtimeCaching: [
     {
       urlPattern: /^https:\/\/backend.canellariccardo\.it\/medium/,
-      handler: 'fastest'
+      handler: 'networkFirst',
     },
     {
       urlPattern: /\.(?:png|jpg|jpeg|webp|svg|gif|tiff)$/,
-      handler: `fastest`,
+      handler: `networkFirst`,
     },
   ],
 };

@@ -11,16 +11,16 @@ $blue: #4e57ef;
 $darkBlue: #4a69ff;
 $lightBlue: #cfd7ff;
 $green: #66e2d5;
+$borderGrey: #d6d6d6;
+$shadowGrey: #bababa;
 
 
 $background: $primary;
 $textcolor: $secondary;
 $lighttext: $darksecondary;
 
-$fontbase: 'Roboto',
-sans-serif;
-$fontparag: 'Roboto Mono',
-monospace;
+$fontbase: 'Roboto', sans-serif;
+$fontparag: 'Roboto Mono', monospace;
 
 $goldgradient: linear-gradient(110deg, $gold 0%, $gold 33%, #d8c498 44%, #775f2d 55%, $gold 67%, $gold 100%);
 $whitegradient: linear-gradient(110deg, $secondary 0%, $secondary 100%);

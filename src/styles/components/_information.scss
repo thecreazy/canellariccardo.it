@@ -10,7 +10,10 @@
     background: $background;
     color: $gold;
     transition: all ease-in .3s;
-    z-index: 99;
+    z-index: 89;
+    border: 1px solid $borderGrey;
+    box-shadow: 3px 3px 0px $shadowGrey;
+    border-radius: 3px;
     &:hover{
         transform: translateY(-50%) scale(1.05);
     }

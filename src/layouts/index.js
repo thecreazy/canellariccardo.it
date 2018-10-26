@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
-import { Trail, animated } from 'react-spring'
+import { Trail, animated } from 'react-spring';
 
 import "../styles/main.scss";
+
+require('isomorphic-fetch');
 
 const items = new Array(1).fill(0).map((_, i) => i)
 class TemplateWrapper extends Component {
@@ -55,7 +57,7 @@ class TemplateWrapper extends Component {
             <animated.div
               className="pointer"
               style={{
-                zIndex: items.length - i,
+                zIndex: 99,
                 transform: props.coords.interpolate(this.transform)
               }} />
           )}
