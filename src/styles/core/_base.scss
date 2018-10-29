@@ -1,29 +1,33 @@
-html, body {
+html,
+body {
     margin: 0;
 }
 
-body{
+body {
     background: $background;
     color: $textcolor;
     font-family: $fontbase;
 }
 
-section{
+section {
     padding: 62px 40px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     box-sizing: border-box;
     position: relative;
-    &.--column{
+
+    &.--column {
         flex-direction: column;
         flex-wrap: wrap;
     }
-    &.--row{
+
+    &.--row {
         flex-direction: row;
         flex-wrap: wrap;
     }
-    .section__title__background{
+
+    .section__title__background {
         font-size: 4rem;
         text-align: left;
         left: 0;
@@ -31,31 +35,36 @@ section{
         color: $secondary;
         width: 100%;
     }
-    .section__title__decorator{
+
+    .section__title__decorator {
         background: $lightBlue;
         border: 1px solid $blue;
         box-shadow: 3px 4px 0px $blue;
         width: 60%;
         margin-bottom: 40px;
+
         @media #{$small-and-down} {
             width: 100%
         }
     }
-    .section__divider{
+
+    .section__divider {
         display: inline-block;
         color: $secondary;
-        background: $green;
+        background: $darkBlue;
         font-family: $fontparag;
         font-size: 2rem;
         padding: 3px 10px;
         border: 2px solid $secondary;
         margin: 20px 0px;
     }
+
     @media #{$small-screen-portrait-and-down} {
         padding: 30px 10px;
         overflow: hidden;
         height: 100%;
-        .section__title__background{
+
+        .section__title__background {
             font-size: 4rem;
             color: $secondary;
             position: relative;
@@ -63,27 +72,27 @@ section{
     }
 }
 
-h1{
+h1 {
     font-size: 3.75rem;
     margin: 0.67em 0 0 0;
-    
+
 }
 
-h2{
+h2 {
     font-size: 1rem;
     letter-spacing: 1px;
     font-family: $fontparag;
     font-weight: 400;
 }
 
-p{
+p {
     font-family: $fontparag;
     font-size: 1.24rem;
     letter-spacing: 1.5px;
     word-break: break-word;
 }
 
-a{
+a {
     background: $goldgradient;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -93,18 +102,22 @@ a{
     transition: background 6s;
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     will-change: background, letter-spacing;
-    &:hover{
+
+    &:hover {
         background-position-x: -150%;
     }
-    &.--list{
+
+    &.--list {
         font-family: $fontbase;
         font-size: 1.45rem;
         line-height: 2.45rem;
-        &:hover{
+
+        &:hover {
             border-bottom: 5px solid $gold;
         }
     }
-    .tag{
+
+    .tag {
         border: 2px solid transparent;
         border-radius: 3px;
         text-align: center;
@@ -117,6 +130,7 @@ a{
         font-size: 15px;
         text-transform: uppercase;
     }
+
     @media #{$small-and-down} {
         background: none;
         color: $gold;
@@ -124,8 +138,8 @@ a{
     }
 }
 
-.social{
-    a{
+.social {
+    a {
         margin-right: 10px;
     }
 }

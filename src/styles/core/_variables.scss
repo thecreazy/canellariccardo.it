@@ -1,16 +1,16 @@
-$primary: #f9f9fa;
+$primary: #282828;
 $lightprimary: #343434;
-$secondary: #282828;
+$secondary: #f9f9fa;
 $darksecondary: #cecece;
 $orange: #FF5C3B;
 $pink: #FF2B67;
 $violet: #7b4397;
 $red: #dc2430;
 $gold: #bc994e;
-$blue: #4e57ef;
-$darkBlue: #4a69ff;
-$lightBlue: #cfd7ff;
-$green: #66e2d5;
+$blue: #3D4E7F;
+$darkBlue: #223364;
+$lightBlue: #8F9ABB;
+$green: green;
 $borderGrey: #d6d6d6;
 $shadowGrey: #bababa;
 
@@ -19,8 +19,10 @@ $background: $primary;
 $textcolor: $secondary;
 $lighttext: $darksecondary;
 
-$fontbase: 'Roboto', sans-serif;
-$fontparag: 'Roboto Mono', monospace;
+$fontbase: 'Roboto',
+sans-serif;
+$fontparag: 'Roboto Mono',
+monospace;
 
 $goldgradient: linear-gradient(110deg, $gold 0%, $gold 33%, #d8c498 44%, #775f2d 55%, $gold 67%, $gold 100%);
 $whitegradient: linear-gradient(110deg, $secondary 0%, $secondary 100%);

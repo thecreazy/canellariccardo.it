@@ -1,16 +1,19 @@
-.pic{
+.pic {
     width: 20%;
     opacity: .3;
     display: flex;
     background: $primary;
     align-items: center;
     transition: all .5s;
-    &.--hide{
+
+    &.--hide {
         opacity: 0;
     }
-    .pic_img{
+
+    .pic_img {
         max-width: 100%;
     }
+
     @media #{$small-and-down} {
         width: 45%;
         opacity: 1;
