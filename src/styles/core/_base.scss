@@ -17,6 +17,14 @@ section {
     box-sizing: border-box;
     position: relative;
 
+    &#home {
+        height: 100vh;
+
+        @media #{$small-and-down} {
+            height: auto;
+        }
+    }
+
     &.--column {
         flex-direction: column;
         flex-wrap: wrap;

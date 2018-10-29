@@ -1,0 +1,17 @@
+.homecontainer {
+ text-align: center;
+
+ &__description {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ @media #{$small-and-down} {
+  text-align: left;
+
+  &__description {
+   width: 100%;
+  }
+ }
+}

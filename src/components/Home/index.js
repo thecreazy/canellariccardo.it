@@ -50,34 +50,51 @@ export default class Home extends Component {
 	render() {
 		return (
 			<section id="home">
-				<canvas className="__absolute --topleft __under" id="homebackground" />
-				<h1>Riccardo Canella</h1>
-				<p className="__fulltwo-tre __mobile-full">
-					From Italy living in Parma, where I work as a Frontend Developer at{' '}
-					<a href="https://caffeina.com" target="_blank" rel="noopener noreferrer">
-						Caffeina
-					</a>. With a fullstack javascript background, my strength lies in websites and apps. If you want to
-					know more about me, my work or if youʼre a head hunter who wants to offer me a lot of money, feel
-					free to contact me on canella_riccardo[at]icloud.com.
-				</p>
-				<h2>ON THE ROAD DEVELOPER</h2>
-				<p className="social">
-					<a aria-label="Facebook" target="_blank" rel="noopener noreferrer" href={config.social.facebook}>
-						<span className="icon-facebook" />
-					</a>
-					<a aria-label="Twitter" target="_blank" rel="noopener noreferrer" href={config.social.twitter}>
-						<span className="icon-twitter" />
-					</a>
-					<a aria-label="Instagram" target="_blank" rel="noopener noreferrer" href={config.social.instagram}>
-						<span className="icon-instagram" />
-					</a>
-					<a aria-label="Linkedin" target="_blank" rel="noopener noreferrer" href={config.social.linkedin}>
-						<span className="icon-linkedin" />
-					</a>
-					<a aria-label="Github" target="_blank" rel="noopener noreferrer" href={config.social.github}>
-						<span className="icon-github" />
-					</a>
-				</p>
+				<div className="homecontainer">
+					<canvas className="__absolute --topleft __under" id="homebackground" />
+					<h1>Riccardo Canella</h1>
+					<p className="homecontainer__description">
+						From Italy living in Parma, where I work as a Frontend Developer at{' '}
+						<a href="https://caffeina.com" target="_blank" rel="noopener noreferrer">
+							Caffeina
+						</a>. With a fullstack javascript background, my strength lies in websites and apps. If you want
+						to know more about me, my work or if youʼre a head hunter who wants to offer me a lot of money,
+						feel free to contact me on canella_riccardo[at]icloud.com.
+					</p>
+					<h2>ON THE ROAD DEVELOPER</h2>
+					<p className="social">
+						<a
+							aria-label="Facebook"
+							target="_blank"
+							rel="noopener noreferrer"
+							href={config.social.facebook}
+						>
+							<span className="icon-facebook" />
+						</a>
+						<a aria-label="Twitter" target="_blank" rel="noopener noreferrer" href={config.social.twitter}>
+							<span className="icon-twitter" />
+						</a>
+						<a
+							aria-label="Instagram"
+							target="_blank"
+							rel="noopener noreferrer"
+							href={config.social.instagram}
+						>
+							<span className="icon-instagram" />
+						</a>
+						<a
+							aria-label="Linkedin"
+							target="_blank"
+							rel="noopener noreferrer"
+							href={config.social.linkedin}
+						>
+							<span className="icon-linkedin" />
+						</a>
+						<a aria-label="Github" target="_blank" rel="noopener noreferrer" href={config.social.github}>
+							<span className="icon-github" />
+						</a>
+					</p>
+				</div>
 			</section>
 		);
 	}
