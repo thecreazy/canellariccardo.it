@@ -7,6 +7,11 @@ body {
     background: $background;
     color: $textcolor;
     font-family: $fontbase;
+    overflow: hidden;
+}
+
+#___content {
+    background: $secondary;
 }
 
 section {
@@ -18,7 +23,7 @@ section {
     position: relative;
 
     &#home {
-        height: 100vh;
+        height: 110vh;
 
         @media #{$small-and-down} {
             height: auto;
@@ -36,30 +41,27 @@ section {
     }
 
     .section__title__background {
-        font-size: 4rem;
+        font-size: 12rem;
+        line-height: 13rem;
+        text-transform: uppercase;
+        font-weight: 800;
         text-align: left;
         left: 0;
         margin: 0;
-        color: $secondary;
+        color: $textcolor;
         width: 100%;
+        display: block;
     }
 
     .section__title__decorator {
-        background: $lightBlue;
-        border: 1px solid $blue;
-        box-shadow: 3px 4px 0px $blue;
-        width: 60%;
-        margin-bottom: 40px;
-
-        @media #{$small-and-down} {
-            width: 100%
-        }
+        border-bottom: 2px solid $textcolor;
     }
+
 
     .section__divider {
         display: inline-block;
         color: $secondary;
-        background: $darkBlue;
+        background: $lightprimary;
         font-family: $fontparag;
         font-size: 2rem;
         padding: 3px 10px;
@@ -73,8 +75,8 @@ section {
         height: 100%;
 
         .section__title__background {
-            font-size: 4rem;
-            color: $secondary;
+            font-size: 6rem;
+            line-height: 7rem;
             position: relative;
         }
     }
@@ -116,7 +118,7 @@ a {
     }
 
     &.--list {
-        font-family: $fontbase;
+        font-family: $fontparag;
         font-size: 1.45rem;
         line-height: 2.45rem;
 
@@ -129,12 +131,12 @@ a {
         border: 2px solid transparent;
         border-radius: 3px;
         text-align: center;
-        background: $darkBlue;
+        background: $lightprimary;
         color: $primary;
         letter-spacing: 1px;
         -webkit-text-fill-color: white;
         padding: 0px 5px;
-        font-family: $fontparag;
+        font-family: $fontbase;
         font-size: 15px;
         text-transform: uppercase;
     }

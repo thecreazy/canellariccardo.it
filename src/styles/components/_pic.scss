@@ -1,6 +1,6 @@
 .pic {
-    width: 20%;
-    opacity: .3;
+    width: 40%;
+    opacity: 1;
     display: flex;
     background: $secondary;
     align-items: center;
@@ -12,6 +12,12 @@
 
     .pic_img {
         max-width: 100%;
+        filter: grayscale(1);
+        transition: filter 2s;
+
+        &:hover {
+            filter: grayscale(0)
+        }
     }
 
     @media #{$small-and-down} {

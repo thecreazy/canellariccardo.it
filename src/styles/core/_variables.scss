@@ -1,6 +1,6 @@
-$primary: #282828;
-$lightprimary: #343434;
-$secondary: #f9f9fa;
+$primary: #f9f9fa;
+$lightprimary: #959999;
+$secondary: #f7f3f0;
 $darksecondary: #cecece;
 $orange: #FF5C3B;
 $pink: #FF2B67;
@@ -16,12 +16,12 @@ $shadowGrey: #bababa;
 
 
 $background: $primary;
-$textcolor: $secondary;
+$textcolor: #000000;
 $lighttext: $darksecondary;
 
-$fontbase: 'Roboto',
+$fontbase: 'Roboto Mono',
 sans-serif;
-$fontparag: 'Roboto Mono',
+$fontparag: 'Heebo',
 monospace;
 
 $goldgradient: linear-gradient(110deg, $gold 0%, $gold 33%, #d8c498 44%, #775f2d 55%, $gold 67%, $gold 100%);

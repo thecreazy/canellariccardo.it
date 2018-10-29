@@ -1,32 +1,73 @@
-.__fulltwo-tre{
+.__fulltwo-tre {
     width: 75%;
 }
 
-.__mobile-full{
+.__mobile-full {
     @media #{$small-and-down} {
         width: 100%;
     }
 }
 
-.__absolute{
+.__max--50 {
+    width: 50%;
+}
+
+.__absolute {
     position: absolute;
-    &.--topleft{
+
+    &.--topleft {
         left: 0;
         top: 0;
     }
 }
 
-.__under{
+.__under {
     z-index: -1;
 }
 
-.__onlymobile{
+.__onlymobile {
     display: none;
+
     @media #{$small-and-down} {
         display: block;
     }
 }
 
-.__nopadding{
+.__nopadding {
     padding: 0;
+}
+
+.__overflow--hidden {
+    overflow: hidden;
+}
+
+.__animation-opacity {
+    animation: animateopacity 1s ease-in;
+}
+
+.__flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.__flex-wrap {
+    flex-wrap: wrap;
+}
+
+.__flex {
+    display: flex;
+}
+
+.__space--around {
+    justify-content: space-around
+}
+
+@keyframes animateopacity {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
