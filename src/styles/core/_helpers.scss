@@ -2,11 +2,6 @@
     width: 75%;
 }
 
-.__mobile-full {
-    @media #{$small-and-down} {
-        width: 100%;
-    }
-}
 
 .__max--50 {
     width: 50%;
@@ -60,6 +55,18 @@
 
 .__space--around {
     justify-content: space-around
+}
+
+.__mobile-full {
+    @media #{$small-and-down} {
+        width: 100% !important;
+    }
+}
+
+.__mobile-column {
+    @media #{$small-and-down} {
+        flex-direction: column !important;
+    }
 }
 
 @keyframes animateopacity {

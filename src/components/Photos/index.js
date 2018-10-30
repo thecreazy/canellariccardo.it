@@ -28,8 +28,8 @@ export default class Photos extends Component {
 						</span>
 					</h2>
 				</div>
-				<div className="__flex">
-					<div className="__max--50">
+				<div className="__flex __mobile-column">
+					<div className="__max--50 __mobile-full">
 						<p className="social information__social">
 							<a
 								aria-label="Facebook"
@@ -81,7 +81,7 @@ export default class Photos extends Component {
 							</a>
 						</p>
 					</div>
-					<div className="__max--50 __flex-row __flex-wrap __space--around">
+					<div className="__max--50 __mobile-full __flex-row __flex-wrap __space--around">
 						{pics.map((pic, index) => (
 							<Pic {...pic} link={config.social.instagram} showPic={true} key={`pic--${index}`} />
 						))}

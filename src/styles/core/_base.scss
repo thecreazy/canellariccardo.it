@@ -25,10 +25,6 @@ section {
 
     &#home {
         height: 110vh;
-
-        @media #{$small-and-down} {
-            height: auto;
-        }
     }
 
     &.--column {
@@ -84,8 +80,8 @@ section {
         height: 100%;
 
         .section__title__background {
-            font-size: 6rem;
-            line-height: 7rem;
+            font-size: 5.6rem;
+            line-height: 6.6rem;
             position: relative;
         }
     }

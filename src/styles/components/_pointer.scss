@@ -1,4 +1,4 @@
-.pointer{
+.pointer {
  border-radius: 99px;
  background-color: transparent;
  border: 2px solid $gold;
@@ -8,4 +8,8 @@
  margin-left: 25px;
  position: absolute;
  pointer-events: none;
+
+ @media #{$small-and-down} {
+  display: none;
+ }
 }
