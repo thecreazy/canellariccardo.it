@@ -141,10 +141,10 @@ export default class Home extends Component {
 							<span className="icon-github" />
 						</a>
 					</p>
-					<div class="scrolldown">
-						<div class="chevron" />
-						<div class="chevron" />
-						<div class="chevron" />
+					<div className="scrolldown">
+						<div className="chevron" />
+						<div className="chevron" />
+						<div className="chevron" />
 					</div>
 				</div>
 			</section>
