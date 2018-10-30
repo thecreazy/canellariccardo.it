@@ -1,0 +1,19 @@
+.animate {
+ &.--start {
+  .section__title__background>span>span {
+   animation: animatetranslate 1.5s ease-in;
+  }
+ }
+}
+
+
+
+@keyframes animatetranslate {
+ from {
+  transform: translateY(100%);
+ }
+
+ to {
+  transform: translateY(0%);
+ }
+}

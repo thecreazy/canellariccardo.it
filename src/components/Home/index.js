@@ -21,15 +21,14 @@ export default class Home extends Component {
 		const canvas = document.getElementById('homebackground');
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight;
-		const context = canvas.getContext('2d');
+		this.context = canvas.getContext('2d');
 		this.canvas = canvas;
-		this.context = context;
 		this.contentElement = document.getElementById('___content');
 		this.homecontainer = document.getElementById('homecontainer');
 		window.addEventListener('resize', this.resizeCanvas);
 		window.addEventListener('wheel', this.handlescrollCanvas);
-		this.initCanvas(context);
-		this.animateCanvas(context);
+		this.initCanvas(this.context);
+		this.animateCanvas(this.context);
 	}
 
 	componentWillUnmount() {

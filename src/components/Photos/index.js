@@ -12,17 +12,20 @@ export default class Photos extends Component {
 			pics : []
 		};
 	}
-	// eslint-disable-next-line
-	componentWillMount() {
+
+	componentDidMount() {
 		fetch(config.picsApi).then((response) => response.json()).then((data) => this.setState({ pics: data }));
 	}
+
 	render() {
 		const pics = this.state.pics.filter((data, i) => i < 4);
 		return (
 			<section id="photos" className="">
-				<div className="section__title__decorator">
+				<div className="section__title__decorator animate">
 					<h2 className="section__title__background">
-						<span>Follow me </span>
+						<span>
+							<span>Follow me </span>
+						</span>
 					</h2>
 				</div>
 				<div className="__flex">

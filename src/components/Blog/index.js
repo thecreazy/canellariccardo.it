@@ -25,9 +25,14 @@ export default class Blog extends Component {
 
 		return (
 			<section id="blog">
-				<div className="section__title__decorator">
+				<div className="section__title__decorator animate">
 					<h2 className="section__title__background">
-						<span> What i </span> <br /> <span> write </span>
+						<span>
+							<span> What i </span>
+						</span>
+						<span>
+							<span> write </span>
+						</span>
 					</h2>
 				</div>
 				<div> {(() => [ ...elements ])()} </div>
