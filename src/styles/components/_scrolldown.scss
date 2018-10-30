@@ -5,6 +5,10 @@
  margin-left: auto;
  margin-right: auto;
 
+ @media #{$small-and-down} {
+  display: none;
+ }
+
  .chevron {
   position: absolute;
   width: 28px;

@@ -1,6 +1,11 @@
 .animate {
+ .section__title__background>span>span {
+  transform: translateY(100%);
+ }
+
  &.--start {
   .section__title__background>span>span {
+   transform: translateY(0%);
    animation: animatetranslate 1.5s ease-in;
   }
  }
