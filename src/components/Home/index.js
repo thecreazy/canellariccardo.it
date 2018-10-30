@@ -94,6 +94,19 @@ export default class Home extends Component {
 			element.update();
 		});
 	}
+
+	fakeScroll = (e) => {
+		e.preventDefault();
+		var evt = document.createEvent('MouseEvents');
+		evt.initEvent('wheel', true, true);
+		evt.deltaY = this.settings.bigRadius * 4;
+		window.dispatchEvent(evt);
+		evt.deltaY = this.settings.bigRadius * 4;
+		window.dispatchEvent(evt);
+		evt.deltaY = this.settings.bigRadius / 3;
+		window.dispatchEvent(evt);
+	};
+
 	render() {
 		return (
 			<section id="home">
@@ -141,7 +154,7 @@ export default class Home extends Component {
 							<span className="icon-github" />
 						</a>
 					</p>
-					<div className="scrolldown">
+					<div className="scrolldown" onClick={this.fakeScroll}>
 						<div className="chevron" />
 						<div className="chevron" />
 						<div className="chevron" />

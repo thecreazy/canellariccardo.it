@@ -29,7 +29,7 @@ export default class Circle {
 		this.draw();
 	}
 	updateRadius(delta) {
-		this.radius = this.radius + this.radius * delta / 100;
+		this.radius = this.radius + this.radius * 1.5 * delta / 100;
 		if (this.radius < 0.1) this.radius = 0.1;
 		return this.radius;
 	}
