@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import Loggo from 'common-loggo';
 
 import Layout from '../layouts';
 
@@ -18,6 +19,13 @@ export default class Index extends Component {
 				horizontalSlider1 : 0
 			}
 		};
+		Loggo.init({
+			rock : {
+				label      : '🤟',
+				color      : 'black',
+				background : 'white'
+			}
+		});
 	}
 
 	componentDidMount() {
@@ -26,6 +34,8 @@ export default class Index extends Component {
 		startValues.forEach((element) => {
 			this.observer.observe(element);
 		});
+		Loggo.rock('Hi guys!');
+		Loggo.rock('Thx to visit my website');
 	}
 
 	componentWillUnmount() {
