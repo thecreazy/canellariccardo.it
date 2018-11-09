@@ -8,7 +8,6 @@ import Blog from '../components/Blog';
 import Lab from '../components/Lab';
 import Photos from '../components/Photos';
 
-require('intersection-observer');
 export default class Index extends Component {
 	constructor(props) {
 		super(props);
@@ -29,6 +28,7 @@ export default class Index extends Component {
 	}
 
 	componentDidMount() {
+		require('intersection-observer');
 		this.observer = new IntersectionObserver(this.onIntersection, {});
 		const startValues = document.querySelectorAll('.animate');
 		startValues.forEach((element) => {
