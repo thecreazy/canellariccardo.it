@@ -5,6 +5,7 @@
   "author": "Riccardo Canella <canella_riccardo@icloud.com>",
   "dependencies": {
     "common-loggo": "^1.1.0",
+    "favicons-webpack-plugin": "^0.0.9",
     "gatsby": "^2.0.0",
     "gatsby-link": "^2.0.5",
     "gatsby-plugin-favicon": "^3.1.4",
