@@ -1,4 +1,8 @@
-export default [ {
+export default [{
+    name: 'frontend-telnet',
+    description: 'telnet comunication for hiring scope in jobtome',
+    link: 'https://github.com/jobtome-labs/frontend-telnet'
+}, {
     name: 'siteaudit',
     description: 'Site audit for your site from terminal',
     link: 'https://github.com/thecreazy/siteaudit'

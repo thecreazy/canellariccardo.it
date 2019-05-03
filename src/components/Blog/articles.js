@@ -1,5 +1,13 @@
 export default [
   {
+    year: 2019,
+    articles: [{
+      title: "How to generate Changelog using Conventional Commits",
+      publication: "Jobtome.Engineering",
+      link: "https://medium.com/jobtome-engineering/how-to-generate-changelog-using-conventional-commits-10be40f5826c"
+    }]
+  },
+  {
     year: 2018,
     articles: [{
       title: "Clean Code saves Devs. The Caffeina approach to ReactJS",
