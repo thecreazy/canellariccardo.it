@@ -5,19 +5,7 @@ import config from '../../config';
 import Pic from './pic';
 
 export default class Photos extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			pics : []
-		};
-	}
-
-	componentDidMount() {
-		fetch(config.picsApi).then((response) => response.json()).then((data) => this.setState({ pics: data }));
-	}
-
 	render() {
-		const pics = this.state.pics.filter((data, i) => i < 4);
 		return (
 			<section id="photos" className="">
 				<div className="section__title__decorator animate">
@@ -81,9 +69,6 @@ export default class Photos extends Component {
 						</p>
 					</div>
 					<div className="__max--50 __mobile-full __flex-row __flex-wrap __space--around">
-						{pics.map((pic, index) => (
-							<Pic {...pic} link={config.social.instagram} showPic={true} key={`pic--${index}`} />
-						))}
 					</div>
 				</div>
 			</section>
