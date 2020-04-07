@@ -8,7 +8,6 @@ body {
     color: $textcolor;
     font-family: $fontbase;
     overflow: hidden;
-    cursor: none;
 }
 
 #___content {
@@ -117,7 +116,6 @@ a {
     transition: background 6s;
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     will-change: background, letter-spacing;
-    cursor: none;
 
     &:hover {
         background-position-x: -150%;

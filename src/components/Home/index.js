@@ -57,7 +57,7 @@ export default class Home extends Component {
 
 	updateWindowPosition = (delta) => {
 		const actual = this.contentElement.style.transform;
-		let [ x, y = '', z ] = actual.split('px');
+		let [, y = '' ] = actual.split('px');
 		y = y.replace('-', '');
 		y = Number(y.replace(', ', ''));
 		y = y + delta >= 0 ? y + delta : 0;
@@ -114,9 +114,9 @@ export default class Home extends Component {
 				<div className="homecontainer __animation-opacity" id="homecontainer">
 					<h1>Riccardo Canella</h1>
 					<p className="homecontainer__description">
-						From Italy living in Varese, where I work as a Frontend Developer at{' '}
-						<a href="https://weare.jobtome.com" target="_blank" rel="noopener noreferrer">
-							Jobtome
+						From Italy living in Varese, where I work as a Senior Frontend Engineer at{' '}
+						<a href="https://lmgroup.lastminute.com/" target="_blank" rel="noopener noreferrer">
+							Lastminute
 						</a>. With a fullstack javascript background, my strength lies in websites and apps. If you want
 						to know more about me, my work or if youʼre a head hunter who wants to offer me a lot of money,
 						feel free to contact me on canella_riccardo[at]icloud.com.

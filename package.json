@@ -17,7 +17,7 @@
     "gatsby-plugin-sass": "^2.0.1",
     "intersection-observer": "^0.5.1",
     "isomorphic-fetch": "^2.2.1",
-    "node-sass": "^4.9.4",
+    "node-sass": "^4.12.x",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-helmet": "^5.2.0",
@@ -36,8 +36,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop -H 0.0.0.0",
     "serve": "gatsby serve",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "prettier --write \"src/**/*.js\""
   },
   "devDependencies": {
     "prettier": "^1.11.1"

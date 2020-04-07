@@ -1,5 +1,21 @@
 export default [
   {
+    year: 2020,
+    articles: [{
+      title: "Structural Patterns in ES6+ using Game of Thrones",
+      publication: "Hackdoor",
+      link: "https://hackdoor.io/articles/0XN65AJd/structural-patterns-in-es6-using-game-of-thrones"
+    },{
+      title: "Create a Modern Vanilla Javascript Router",
+      publication: "Hackdoor",
+      link: "https://hackdoor.io/articles/0XN6jANd/create-a-modern-vanilla-javascript-router"
+    },{
+      title: "Creational Patterns in ES6+ using Game of Thrones",
+      publication: "Hackdoor",
+      link: "https://hackdoor.io/articles/9YJbK2Nn/creational-patterns-in-es6-using-game-of-thrones"
+    }]
+  },
+  {
     year: 2019,
     articles: [{
       title: "How to generate Changelog using Conventional Commits",
