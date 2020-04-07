@@ -4,8 +4,6 @@ import { Trail, animated } from 'react-spring';
 
 import '../styles/main.scss';
 
-require('isomorphic-fetch');
-
 const items = new Array(1).fill(0).map((_, i) => i);
 class TemplateWrapper extends Component {
 	state = { coords: [ 0, 0 ] };

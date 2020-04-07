@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'whatwg-fetch';
 
 import Slide from './slide';
 
