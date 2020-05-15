@@ -40,6 +40,7 @@ section {
         font-size: 12rem;
         line-height: 13rem;
         text-transform: uppercase;
+        font-family: $fontbase;
         font-weight: 800;
         text-align: left;
         left: 0;
@@ -66,7 +67,7 @@ section {
         display: inline-block;
         color: $secondary;
         background: $lightprimary;
-        font-family: $fontparag;
+        font-family: $fontbase;
         font-size: 2rem;
         padding: 3px 10px;
         border: 2px solid $secondary;
@@ -140,7 +141,7 @@ a {
         letter-spacing: 1px;
         -webkit-text-fill-color: white;
         padding: 0px 5px;
-        font-family: $fontbase;
+        font-family: $fontparag;
         font-size: 15px;
         text-transform: uppercase;
     }

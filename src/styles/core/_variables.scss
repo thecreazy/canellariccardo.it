@@ -19,10 +19,8 @@ $background: $primary;
 $textcolor: #000000;
 $lighttext: $darksecondary;
 
-$fontbase: 'Roboto Mono',
-sans-serif;
-$fontparag: 'Heebo',
-monospace;
+$fontbase: 'Dancing Script', cursive;
+$fontparag: 'Inter', sans-serif;
 
 $goldgradient: linear-gradient(110deg, $gold 0%, $gold 33%, #d8c498 44%, #775f2d 55%, $gold 67%, $gold 100%);
 $whitegradient: linear-gradient(110deg, $secondary 0%, $secondary 100%);
